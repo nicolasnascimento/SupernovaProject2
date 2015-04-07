@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AB98CDB3-52E8-475D-B4A3-1A7374162D7B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OrbitApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F8342C6AE715C21C9A42DB626B93011FB6837778</key>
+		<string>https://github.com/nicolasnascimento/SupernovaProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OrbitApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F8342C6AE715C21C9A42DB626B93011FB6837778</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nicolasnascimento/SupernovaProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F8342C6AE715C21C9A42DB626B93011FB6837778</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8342C6AE715C21C9A42DB626B93011FB6837778</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SupernovaProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

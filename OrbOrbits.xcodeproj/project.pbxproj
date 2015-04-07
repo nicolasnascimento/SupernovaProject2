@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C1DD0C71AC5B5E600DF1339 /* LevelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C01AC5B5E600DF1339 /* LevelInfo.m */; };
+		0C1DD0C81AC5B5E600DF1339 /* OrbitNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C21AC5B5E600DF1339 /* OrbitNode.m */; };
+		0C1DD0C91AC5B5E600DF1339 /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C41AC5B5E600DF1339 /* Planet.m */; };
+		0C1DD0CA1AC5B5E600DF1339 /* SpinnigNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */; };
+		0C346A601ACB21C700A05741 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C346A5F1ACB21C700A05741 /* Colors.m */; };
+		0C79CF5D1AC9A824007DEE71 /* PopUpMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */; };
+		0C84C7091AC89D2000061EFB /* RoundedBackgroundLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84C7081AC89D2000061EFB /* RoundedBackgroundLabelNode.m */; };
+		0C9020FD1ACAF4930033A2ED /* telaJogo.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C9020FC1ACAF4930033A2ED /* telaJogo.mp3.mp3 */; };
+		0C932B721ABF959600C4E28E /* StartMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B711ABF959600C4E28E /* StartMenuScene.m */; };
+		0C932B741ABF96F200C4E28E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0C932B731ABF96F200C4E28E /* StartScene.sks */; };
+		0C932B7A1ABF9F0700C4E28E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B791ABF9F0700C4E28E /* Util.m */; };
+		0C932B891ABFB75800C4E28E /* starts.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0C932B871ABFB75800C4E28E /* starts.sks */; };
+		0C932B8A1ABFB75800C4E28E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C932B881ABFB75800C4E28E /* spark.png */; };
+		0CB7625A1ABC9BBF00A1BE30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762591ABC9BBF00A1BE30 /* main.m */; };
+		0CB7625D1ABC9BBF00A1BE30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB7625C1ABC9BBF00A1BE30 /* AppDelegate.m */; };
+		0CB762601ABC9BBF00A1BE30 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB7625F1ABC9BBF00A1BE30 /* GameScene.m */; };
+		0CB762621ABC9BBF00A1BE30 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762611ABC9BBF00A1BE30 /* GameScene.sks */; };
+		0CB762651ABC9BBF00A1BE30 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762641ABC9BBF00A1BE30 /* GameViewController.m */; };
+		0CB762681ABC9BBF00A1BE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762661ABC9BBF00A1BE30 /* Main.storyboard */; };
+		0CB7626A1ABC9BBF00A1BE30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762691ABC9BBF00A1BE30 /* Images.xcassets */; };
+		0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */; };
+		0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */; };
+		D4C1D8E21AC48E7C00B46607 /* IndexShapeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */; };
+		F4FC16931ACAF69B00E6B860 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC168F1ACAF69B00E6B860 /* 001.mp3 */; };
+		F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16901ACAF69B00E6B860 /* 002.mp3 */; };
+		F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */; };
+		F4FC16961ACAF69B00E6B860 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16921ACAF69B00E6B860 /* wrong.mp3 */; };
+		F4FC16991ACB0A6800E6B860 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16971ACB0A6800E6B860 /* MyParticle.sks */; };
+		F4FC169A1ACB0A6800E6B860 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16981ACB0A6800E6B860 /* spark.png */; };
+		F4FC169C1ACB0D1800E6B860 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4FC169B1ACB0D1800E6B860 /* FireParticle.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CB762731ABC9BBF00A1BE30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CB7624C1ABC9BBF00A1BE30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CB762531ABC9BBF00A1BE30;
+			remoteInfo = SupernovaProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C1DD0BF1AC5B5E600DF1339 /* LevelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelInfo.h; path = UsefulClasses/LevelInfo.h; sourceTree = "<group>"; };
+		0C1DD0C01AC5B5E600DF1339 /* LevelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelInfo.m; path = UsefulClasses/LevelInfo.m; sourceTree = "<group>"; };
+		0C1DD0C11AC5B5E600DF1339 /* OrbitNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrbitNode.h; path = UsefulClasses/OrbitNode.h; sourceTree = "<group>"; };
+		0C1DD0C21AC5B5E600DF1339 /* OrbitNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrbitNode.m; path = UsefulClasses/OrbitNode.m; sourceTree = "<group>"; };
+		0C1DD0C31AC5B5E600DF1339 /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Planet.h; path = UsefulClasses/Planet.h; sourceTree = "<group>"; };
+		0C1DD0C41AC5B5E600DF1339 /* Planet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Planet.m; path = UsefulClasses/Planet.m; sourceTree = "<group>"; };
+		0C1DD0C51AC5B5E600DF1339 /* SpinnigNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinnigNode.h; path = UsefulClasses/SpinnigNode.h; sourceTree = "<group>"; };
+		0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinnigNode.m; path = UsefulClasses/SpinnigNode.m; sourceTree = "<group>"; };
+		0C346A5E1ACB21C700A05741 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		0C346A5F1ACB21C700A05741 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		0C79CF5B1AC9A824007DEE71 /* PopUpMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpMenu.h; sourceTree = "<group>"; };
+		0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpMenu.m; sourceTree = "<group>"; };
+		0C84C7071AC89D2000061EFB /* RoundedBackgroundLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedBackgroundLabelNode.h; sourceTree = "<group>"; };
+		0C84C7081AC89D2000061EFB /* RoundedBackgroundLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedBackgroundLabelNode.m; sourceTree = "<group>"; };
+		0C9020FC1ACAF4930033A2ED /* telaJogo.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = telaJogo.mp3.mp3; sourceTree = SOURCE_ROOT; };
+		0C932B701ABF959600C4E28E /* StartMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuScene.h; sourceTree = "<group>"; };
+		0C932B711ABF959600C4E28E /* StartMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuScene.m; sourceTree = "<group>"; };
+		0C932B731ABF96F200C4E28E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		0C932B781ABF9F0700C4E28E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		0C932B791ABF9F0700C4E28E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		0C932B871ABFB75800C4E28E /* starts.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = starts.sks; path = ../starts.sks; sourceTree = "<group>"; };
+		0C932B881ABFB75800C4E28E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		0CB762541ABC9BBF00A1BE30 /* OrbOrbits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrbOrbits.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB762581ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CB762591ABC9BBF00A1BE30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0CB7625B1ABC9BBF00A1BE30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0CB7625C1ABC9BBF00A1BE30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0CB7625E1ABC9BBF00A1BE30 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		0CB7625F1ABC9BBF00A1BE30 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		0CB762611ABC9BBF00A1BE30 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		0CB762631ABC9BBF00A1BE30 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		0CB762641ABC9BBF00A1BE30 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		0CB762671ABC9BBF00A1BE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CB762691ABC9BBF00A1BE30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0CB7626C1ABC9BBF00A1BE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0CB762721ABC9BBF00A1BE30 /* OrbOrbitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbOrbitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB762771ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupernovaProjectTests.m; sourceTree = "<group>"; };
+		D4C1D8E01AC48E7C00B46607 /* IndexShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexShapeNode.h; sourceTree = "<group>"; };
+		D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexShapeNode.m; sourceTree = "<group>"; };
+		F4FC168F1ACAF69B00E6B860 /* 001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001.mp3; sourceTree = SOURCE_ROOT; };
+		F4FC16901ACAF69B00E6B860 /* 002.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 002.mp3; sourceTree = SOURCE_ROOT; };
+		F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = telainicio1.mp3; sourceTree = SOURCE_ROOT; };
+		F4FC16921ACAF69B00E6B860 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = SOURCE_ROOT; };
+		F4FC16971ACB0A6800E6B860 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		F4FC16981ACB0A6800E6B860 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F4FC169B1ACB0D1800E6B860 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CB762511ABC9BBF00A1BE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CB7626F1ABC9BBF00A1BE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C1DD0CB1AC5B5FC00DF1339 /* UsefulClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D4C1D8E01AC48E7C00B46607 /* IndexShapeNode.h */,
+				D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */,
+				0C79CF5B1AC9A824007DEE71 /* PopUpMenu.h */,
+				0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */,
+				0C1DD0BF1AC5B5E600DF1339 /* LevelInfo.h */,
+				0C1DD0C01AC5B5E600DF1339 /* LevelInfo.m */,
+				0C1DD0C11AC5B5E600DF1339 /* OrbitNode.h */,
+				0C1DD0C21AC5B5E600DF1339 /* OrbitNode.m */,
+				0C1DD0C31AC5B5E600DF1339 /* Planet.h */,
+				0C1DD0C41AC5B5E600DF1339 /* Planet.m */,
+				0C1DD0C51AC5B5E600DF1339 /* SpinnigNode.h */,
+				0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */,
+				0C84C7071AC89D2000061EFB /* RoundedBackgroundLabelNode.h */,
+				0C84C7081AC89D2000061EFB /* RoundedBackgroundLabelNode.m */,
+			);
+			name = UsefulClasses;
+			sourceTree = "<group>";
+		};
+		0C7A95361AC0631A0002B0CD /* SpriteKitEffects */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC16971ACB0A6800E6B860 /* MyParticle.sks */,
+				F4FC169B1ACB0D1800E6B860 /* FireParticle.sks */,
+				F4FC16981ACB0A6800E6B860 /* spark.png */,
+				0C932B871ABFB75800C4E28E /* starts.sks */,
+				0C932B881ABFB75800C4E28E /* spark.png */,
+			);
+			name = SpriteKitEffects;
+			sourceTree = "<group>";
+		};
+		0C7A95371AC0632D0002B0CD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0C932B781ABF9F0700C4E28E /* Util.h */,
+				0C932B791ABF9F0700C4E28E /* Util.m */,
+				0C346A5E1ACB21C700A05741 /* Colors.h */,
+				0C346A5F1ACB21C700A05741 /* Colors.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		0C7A95381AC063350002B0CD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7625E1ABC9BBF00A1BE30 /* GameScene.h */,
+				0CB7625F1ABC9BBF00A1BE30 /* GameScene.m */,
+				0C932B701ABF959600C4E28E /* StartMenuScene.h */,
+				0C932B711ABF959600C4E28E /* StartMenuScene.m */,
+				0CB762611ABC9BBF00A1BE30 /* GameScene.sks */,
+				0C932B731ABF96F200C4E28E /* StartScene.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		0C7A953A1AC0634C0002B0CD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0CB762631ABC9BBF00A1BE30 /* GameViewController.h */,
+				0CB762641ABC9BBF00A1BE30 /* GameViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0C7A953C1AC063760002B0CD /* StoryboardAndImages */ = {
+			isa = PBXGroup;
+			children = (
+				0CB762661ABC9BBF00A1BE30 /* Main.storyboard */,
+				0CB762691ABC9BBF00A1BE30 /* Images.xcassets */,
+				0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */,
+			);
+			name = StoryboardAndImages;
+			sourceTree = "<group>";
+		};
+		0CB7624B1ABC9BBF00A1BE30 = {
+			isa = PBXGroup;
+			children = (
+				0CB762561ABC9BBF00A1BE30 /* SupernovaProject */,
+				0CB762751ABC9BBF00A1BE30 /* SupernovaProjectTests */,
+				0CB762551ABC9BBF00A1BE30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CB762551ABC9BBF00A1BE30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CB762541ABC9BBF00A1BE30 /* OrbOrbits.app */,
+				0CB762721ABC9BBF00A1BE30 /* OrbOrbitsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CB762561ABC9BBF00A1BE30 /* SupernovaProject */ = {
+			isa = PBXGroup;
+			children = (
+				F4C4B2291AC9A870009727E2 /* Sounds */,
+				0C1DD0CB1AC5B5FC00DF1339 /* UsefulClasses */,
+				0C7A953A1AC0634C0002B0CD /* ViewControllers */,
+				0C7A95381AC063350002B0CD /* Scenes */,
+				0C7A95371AC0632D0002B0CD /* Util */,
+				0C7A95361AC0631A0002B0CD /* SpriteKitEffects */,
+				0C7A953C1AC063760002B0CD /* StoryboardAndImages */,
+				0CB762571ABC9BBF00A1BE30 /* Supporting Files */,
+			);
+			path = SupernovaProject;
+			sourceTree = "<group>";
+		};
+		0CB762571ABC9BBF00A1BE30 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7625B1ABC9BBF00A1BE30 /* AppDelegate.h */,
+				0CB7625C1ABC9BBF00A1BE30 /* AppDelegate.m */,
+				0CB762581ABC9BBF00A1BE30 /* Info.plist */,
+				0CB762591ABC9BBF00A1BE30 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CB762751ABC9BBF00A1BE30 /* SupernovaProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */,
+				0CB762761ABC9BBF00A1BE30 /* Supporting Files */,
+			);
+			path = SupernovaProjectTests;
+			sourceTree = "<group>";
+		};
+		0CB762761ABC9BBF00A1BE30 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CB762771ABC9BBF00A1BE30 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4C4B2291AC9A870009727E2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC168F1ACAF69B00E6B860 /* 001.mp3 */,
+				F4FC16901ACAF69B00E6B860 /* 002.mp3 */,
+				F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */,
+				F4FC16921ACAF69B00E6B860 /* wrong.mp3 */,
+				0C9020FC1ACAF4930033A2ED /* telaJogo.mp3.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CB762531ABC9BBF00A1BE30 /* OrbOrbits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CB7627C1ABC9BBF00A1BE30 /* Build configuration list for PBXNativeTarget "OrbOrbits" */;
+			buildPhases = (
+				0CB762501ABC9BBF00A1BE30 /* Sources */,
+				0CB762511ABC9BBF00A1BE30 /* Frameworks */,
+				0CB762521ABC9BBF00A1BE30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrbOrbits;
+			productName = SupernovaProject;
+			productReference = 0CB762541ABC9BBF00A1BE30 /* OrbOrbits.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0CB762711ABC9BBF00A1BE30 /* OrbOrbitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CB7627F1ABC9BBF00A1BE30 /* Build configuration list for PBXNativeTarget "OrbOrbitsTests" */;
+			buildPhases = (
+				0CB7626E1ABC9BBF00A1BE30 /* Sources */,
+				0CB7626F1ABC9BBF00A1BE30 /* Frameworks */,
+				0CB762701ABC9BBF00A1BE30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CB762741ABC9BBF00A1BE30 /* PBXTargetDependency */,
+			);
+			name = OrbOrbitsTests;
+			productName = SupernovaProjectTests;
+			productReference = 0CB762721ABC9BBF00A1BE30 /* OrbOrbitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CB7624C1ABC9BBF00A1BE30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = NotACompany;
+				TargetAttributes = {
+					0CB762531ABC9BBF00A1BE30 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = U5ZZWN44AH;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
+					0CB762711ABC9BBF00A1BE30 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = U5ZZWN44AH;
+						TestTargetID = 0CB762531ABC9BBF00A1BE30;
+					};
+				};
+			};
+			buildConfigurationList = 0CB7624F1ABC9BBF00A1BE30 /* Build configuration list for PBXProject "OrbOrbits" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CB7624B1ABC9BBF00A1BE30;
+			productRefGroup = 0CB762551ABC9BBF00A1BE30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CB762531ABC9BBF00A1BE30 /* OrbOrbits */,
+				0CB762711ABC9BBF00A1BE30 /* OrbOrbitsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CB762521ABC9BBF00A1BE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FC16931ACAF69B00E6B860 /* 001.mp3 in Resources */,
+				0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */,
+				F4FC169C1ACB0D1800E6B860 /* FireParticle.sks in Resources */,
+				0C9020FD1ACAF4930033A2ED /* telaJogo.mp3.mp3 in Resources */,
+				F4FC169A1ACB0A6800E6B860 /* spark.png in Resources */,
+				F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */,
+				F4FC16961ACAF69B00E6B860 /* wrong.mp3 in Resources */,
+				0CB7626A1ABC9BBF00A1BE30 /* Images.xcassets in Resources */,
+				0CB762621ABC9BBF00A1BE30 /* GameScene.sks in Resources */,
+				F4FC16991ACB0A6800E6B860 /* MyParticle.sks in Resources */,
+				F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */,
+				0C932B8A1ABFB75800C4E28E /* spark.png in Resources */,
+				0C932B741ABF96F200C4E28E /* StartScene.sks in Resources */,
+				0C932B891ABFB75800C4E28E /* starts.sks in Resources */,
+				0CB762681ABC9BBF00A1BE30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CB762701ABC9BBF00A1BE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CB762501ABC9BBF00A1BE30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CB762651ABC9BBF00A1BE30 /* GameViewController.m in Sources */,
+				0CB7625D1ABC9BBF00A1BE30 /* AppDelegate.m in Sources */,
+				0C84C7091AC89D2000061EFB /* RoundedBackgroundLabelNode.m in Sources */,
+				0C1DD0C71AC5B5E600DF1339 /* LevelInfo.m in Sources */,
+				D4C1D8E21AC48E7C00B46607 /* IndexShapeNode.m in Sources */,
+				0C79CF5D1AC9A824007DEE71 /* PopUpMenu.m in Sources */,
+				0CB762601ABC9BBF00A1BE30 /* GameScene.m in Sources */,
+				0C1DD0C91AC5B5E600DF1339 /* Planet.m in Sources */,
+				0CB7625A1ABC9BBF00A1BE30 /* main.m in Sources */,
+				0C346A601ACB21C700A05741 /* Colors.m in Sources */,
+				0C932B721ABF959600C4E28E /* StartMenuScene.m in Sources */,
+				0C932B7A1ABF9F0700C4E28E /* Util.m in Sources */,
+				0C1DD0CA1AC5B5E600DF1339 /* SpinnigNode.m in Sources */,
+				0C1DD0C81AC5B5E600DF1339 /* OrbitNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CB7626E1ABC9BBF00A1BE30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CB762741ABC9BBF00A1BE30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CB762531ABC9BBF00A1BE30 /* OrbOrbits */;
+			targetProxy = 0CB762731ABC9BBF00A1BE30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CB762661ABC9BBF00A1BE30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CB762671ABC9BBF00A1BE30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CB7626C1ABC9BBF00A1BE30 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CB7627A1ABC9BBF00A1BE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0CB7627B1ABC9BBF00A1BE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CB7627D1ABC9BBF00A1BE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SupernovaProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OrbOrbits;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		0CB7627E1ABC9BBF00A1BE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SupernovaProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OrbOrbits;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		0CB762801ABC9BBF00A1BE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SupernovaProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = OrbOrbitsTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrbOrbits.app/OrbOrbits";
+			};
+			name = Debug;
+		};
+		0CB762811ABC9BBF00A1BE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SupernovaProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = OrbOrbitsTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrbOrbits.app/OrbOrbits";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CB7624F1ABC9BBF00A1BE30 /* Build configuration list for PBXProject "OrbOrbits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CB7627A1ABC9BBF00A1BE30 /* Debug */,
+				0CB7627B1ABC9BBF00A1BE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CB7627C1ABC9BBF00A1BE30 /* Build configuration list for PBXNativeTarget "OrbOrbits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CB7627D1ABC9BBF00A1BE30 /* Debug */,
+				0CB7627E1ABC9BBF00A1BE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CB7627F1ABC9BBF00A1BE30 /* Build configuration list for PBXNativeTarget "OrbOrbitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CB762801ABC9BBF00A1BE30 /* Debug */,
+				0CB762811ABC9BBF00A1BE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CB7624C1ABC9BBF00A1BE30 /* Project object */;
+}
