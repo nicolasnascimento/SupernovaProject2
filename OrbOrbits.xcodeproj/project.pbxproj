@@ -315,7 +315,7 @@
 				TargetAttributes = {
 					0CB762531ABC9BBF00A1BE30 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = U5ZZWN44AH;
+						DevelopmentTeam = Z83BJJ28JR;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -324,7 +324,7 @@
 					};
 					0CB762711ABC9BBF00A1BE30 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = U5ZZWN44AH;
+						DevelopmentTeam = Z83BJJ28JR;
 						TestTargetID = 0CB762531ABC9BBF00A1BE30;
 					};
 				};

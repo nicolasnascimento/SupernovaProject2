@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CB762531ABC9BBF00A1BE30"
-               BuildableName = "OrbitAll.app"
-               BlueprintName = "OrbitAll"
-               ReferencedContainer = "container:OrbitAll.xcodeproj">
+               BuildableName = "OrbOrbits.app"
+               BlueprintName = "OrbOrbits"
+               ReferencedContainer = "container:OrbOrbits.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CB762711ABC9BBF00A1BE30"
-               BuildableName = "OrbitAllTests.xctest"
-               BlueprintName = "OrbitAllTests"
-               ReferencedContainer = "container:OrbitAll.xcodeproj">
+               BuildableName = "OrbOrbitsTests.xctest"
+               BlueprintName = "OrbOrbitsTests"
+               ReferencedContainer = "container:OrbOrbits.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CB762711ABC9BBF00A1BE30"
-               BuildableName = "OrbitAllTests.xctest"
-               BlueprintName = "OrbitAllTests"
-               ReferencedContainer = "container:OrbitAll.xcodeproj">
+               BuildableName = "OrbOrbitsTests.xctest"
+               BlueprintName = "OrbOrbitsTests"
+               ReferencedContainer = "container:OrbOrbits.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CB762531ABC9BBF00A1BE30"
-            BuildableName = "OrbitAll.app"
-            BlueprintName = "OrbitAll"
-            ReferencedContainer = "container:OrbitAll.xcodeproj">
+            BuildableName = "OrbOrbits.app"
+            BlueprintName = "OrbOrbits"
+            ReferencedContainer = "container:OrbOrbits.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CB762531ABC9BBF00A1BE30"
-            BuildableName = "OrbitAll.app"
-            BlueprintName = "OrbitAll"
-            ReferencedContainer = "container:OrbitAll.xcodeproj">
+            BuildableName = "OrbOrbits.app"
+            BlueprintName = "OrbOrbits"
+            ReferencedContainer = "container:OrbOrbits.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CB762531ABC9BBF00A1BE30"
-            BuildableName = "OrbitAll.app"
-            BlueprintName = "OrbitAll"
-            ReferencedContainer = "container:OrbitAll.xcodeproj">
+            BuildableName = "OrbOrbits.app"
+            BlueprintName = "OrbOrbits"
+            ReferencedContainer = "container:OrbOrbits.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
