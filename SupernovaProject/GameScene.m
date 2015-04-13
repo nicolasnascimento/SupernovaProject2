@@ -17,6 +17,7 @@
 #import "Colors.h"
 #import "GameViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <GameKit/GameKit.h>
 
 @interface GameScene()
 
@@ -43,6 +44,8 @@ bool paused = NO;
     
     if(_playingMusic){
         [self playSoundWithName:@"telaJogo.mp3" extension:@"mp3"];
+    }else {
+        self.backgroundMusicPlayer = nil;
     }
     
     [self setLevel1];
@@ -171,13 +174,21 @@ bool paused = NO;
     return [SKColor colorWithRed:red green:green blue:blue alpha:1];
 }
 
+-(CGFloat)generateRandomRadiusWithMaximumRadius:(CGFloat)maximum Minimum:(CGFloat)minimum range:(NSUInteger)range{
+    NSUInteger random = arc4random() % range;
+    NSUInteger increment = (maximum - minimum)/range;
+    CGFloat radius = minimum + increment*random;
+    
+    return radius;
+}
+
 -(void)generateSpinnigObjectWithAmount:(NSUInteger)amount Offset:(double)offset{
     
     CGFloat realOffset = self.centerNode.radius/2;
     
     //for( int i = 0; i < amount; i++ ){
     while( realOffset < self.frame.size.width/2 ){
-        CGFloat radius = arc4random() % 2 == 1 ? self.levelInfo.spinningNodesRadius : self.levelInfo.spinningNodesRadius*2;
+        CGFloat radius = [self generateRandomRadiusWithMaximumRadius:self.levelInfo.spinningNodesRadius*2 Minimum:self.levelInfo.spinningNodesRadius range:10];
         realOffset += radius*offset;
         
         OrbitNode *orbit = [[OrbitNode alloc] initWithRadius:realOffset color:[self randomColor] lineWidth:1];
@@ -219,6 +230,32 @@ bool paused = NO;
 
 -(RoundedBackgroundLabelNode *)generateRoundedBackgroundLabelNodeWithString:(NSString*)string{
     return [[RoundedBackgroundLabelNode alloc] initWithText:string textColor:[SKColor whiteColor] backgroundColor:[Colors orangeColor] textOffsetToMargin:1.5 font:[Colors font] fontSize:32];
+}
+
+-(void)saveScore{
+    
+    GameViewController *rootViewController =(GameViewController*) self.view.window.rootViewController;
+    if( rootViewController.playerIsAuthenticated ){
+        // Name for ranking created at iTunes Connect
+        NSString *leaderboardIdentifier = @"GeneralRanking";
+        
+        GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:leaderboardIdentifier];
+        if( score ){
+            NSLog(@"Score");
+            score.value = self.levelInfo.currentScore;
+            score.context = 0;
+            
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if( error ){
+                    NSLog(@"ERROR REPORTING SCORE\n%@",error);
+                }else{
+                    NSLog(@"SUCESS REPORTING SCORE");
+                }
+            }];
+        }else{
+            NSLog(@"Error Loading Score");
+        }
+    }
 }
 
 -(void)showPopUpMenu{
@@ -352,10 +389,8 @@ bool paused = NO;
             [self runAction:[SKAction playSoundFileNamed:@"wrong.mp3" waitForCompletion:NO]];
         }
         [self showPopUpMenu];
+        [self saveScore];
         self.levelInfo = nil;
-//        self.levelInfo.currentLevel = 0;
-//        self.levelInfo.currentScore = 0;
-//        self.levelInfo.spinningPeriod = 2.5;
     }
 }
 

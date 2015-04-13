@@ -10,13 +10,19 @@
 #import "GameScene.h"
 #import "StartMenuScene.h"
 #import "Util.h"
+#import <GameKit/GameKit.h>
 
 @implementation GameViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setGameCenter];
+    [self setUpScene];
+}
 
+-(void)setUpScene{
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     //skView.showsFPS = YES;
@@ -31,6 +37,30 @@
     
     // Present the scene.
     [skView presentScene:scene];
+}
+
+
+-(void)setGameCenter{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        if (viewController != nil){
+            [self presentViewController:viewController animated:YES completion:nil];
+        }
+        else if ([GKLocalPlayer localPlayer].isAuthenticated){
+            NSLog(@"enableGameCenter");
+            self.playerIsAuthenticated = YES;
+        }
+        else{
+            //[self disableGameCenter];
+            self.playerIsAuthenticated = NO;
+            NSLog(@"%@",error);
+        }
+    };
+}
+
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+    //[self setUpScene];
 }
 
 - (BOOL)shouldAutorotate

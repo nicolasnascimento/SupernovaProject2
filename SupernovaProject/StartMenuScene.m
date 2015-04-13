@@ -12,6 +12,9 @@
 #import "RoundedBackgroundLabelNode.h"
 #import "Colors.h"
 #import <AVFoundation/AVFoundation.h>
+#import <GameKit/GameKit.h>
+#import "GameViewController.h"
+
 
 @interface StartMenuScene()
 
@@ -34,18 +37,22 @@
 #define BUTTON_GLOW_WIDTH 0.0
 #define TITLE_OFFSET 2.0
 
+
 -(void)didMoveToView:(SKView *)view{
     
     
     if( !self.firstTime )
         _isMusicPlaying = YES;
-    NSError *error;
-    NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"telainicio1" withExtension:@"mp3"];
-    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
-    self.backgroundMusicPlayer.numberOfLoops = -1;
-    [self.backgroundMusicPlayer prepareToPlay];
+    
     if( self.isMusicPlaying ){
+        NSError *error;
+        NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"telainicio1" withExtension:@"mp3"];
+        self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+        self.backgroundMusicPlayer.numberOfLoops = -1;
+        [self.backgroundMusicPlayer prepareToPlay];
         [self.backgroundMusicPlayer play];
+    }else{
+        self.backgroundMusicPlayer = nil;
     }
     
     self.scene.backgroundColor = [SKColor blackColor];
@@ -57,7 +64,7 @@
     self.startButton = [[RoundedBackgroundLabelNode alloc] initWithText:@"Play" textColor:blue backgroundColor:[SKColor whiteColor] textOffsetToMargin:1 font:[Colors font] fontSize:64];
     self.startButton.name = self.startButton.label.name = @"Play";
     self.scoreButton = [[RoundedBackgroundLabelNode alloc] initWithText:@"Ranking" textColor:[SKColor whiteColor] backgroundColor:orange textOffsetToMargin:1 font:@"Bangla Sangam MN" fontSize:28];
-    self.scoreButton.name = self.scoreButton.label.name = @"Levels";
+    self.scoreButton.name = self.scoreButton.label.name = @"Ranking";
     
     self.settingsButton = [[RoundedBackgroundLabelNode alloc] initWithText:(self.backgroundMusicPlayer.isPlaying ? @"Sound" : @"No Sound") textColor:blue backgroundColor:[SKColor whiteColor] textOffsetToMargin:1 font:@"Bangla Sangam MN" fontSize:16];
     self.settingsButton.name = self.settingsButton.label.name = @"Sound";
@@ -105,6 +112,38 @@
     self.title.position = CGPointMake(0, self.frame.size.height/2 - self.title.frame.size.height*TITLE_OFFSET);
 }
 
+-(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard{
+    GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
+    
+    gcViewController.gameCenterDelegate = (GameViewController *)self.view.window.rootViewController;
+
+    
+    if (shouldShowLeaderboard) {
+        gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+        gcViewController.leaderboardIdentifier = @"GeneralRanking";
+    }
+    else{
+        gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
+    }
+    
+    [self.view.window.rootViewController presentViewController:gcViewController animated:YES completion:nil];
+}
+
+-(void)startPlayMusic{
+    if( !self.firstTime )
+        _isMusicPlaying = YES;
+    NSError *error;
+    NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"telainicio1" withExtension:@"mp3"];
+    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.backgroundMusicPlayer.numberOfLoops = -1;
+    [self.backgroundMusicPlayer prepareToPlay];
+    if( self.isMusicPlaying ){
+        [self.backgroundMusicPlayer play];
+    }
+}
+-(void)stopPlayMusic{
+    self.backgroundMusicPlayer = nil;
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
@@ -118,16 +157,22 @@
             }
             [self runAnimationForGameStart];
         }
+        
+        if( [node.name isEqualToString:@"Ranking"] ){
+            [self showLeaderboardAndAchievements:YES];
+        }
+        
         if( [node.name isEqualToString:@"Sound"] ){
             if(_isMusicPlaying){
-                [self.backgroundMusicPlayer stop];
+                //[self.backgroundMusicPlayer stop];
+                [self stopPlayMusic];
                 _isMusicPlaying = NO;
                 self.settingsButton.label.text = @"No Sound";
             }else {
-                [self.backgroundMusicPlayer play];
+                //[self.backgroundMusicPlayer play];
                 _isMusicPlaying = YES;
                 self.settingsButton.label.text = @"Sound";
-
+                [self startPlayMusic];
             }
         }
     }
