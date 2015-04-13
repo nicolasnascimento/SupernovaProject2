@@ -12,6 +12,7 @@
 		0C1DD0C91AC5B5E600DF1339 /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C41AC5B5E600DF1339 /* Planet.m */; };
 		0C1DD0CA1AC5B5E600DF1339 /* SpinnigNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */; };
 		0C346A601ACB21C700A05741 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C346A5F1ACB21C700A05741 /* Colors.m */; };
+		0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C40AF851ADAB24B00186FF1 /* GameKit.framework */; };
 		0C79CF5D1AC9A824007DEE71 /* PopUpMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */; };
 		0C84C7091AC89D2000061EFB /* RoundedBackgroundLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84C7081AC89D2000061EFB /* RoundedBackgroundLabelNode.m */; };
 		0C9020FD1ACAF4930033A2ED /* telaJogo.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C9020FC1ACAF4930033A2ED /* telaJogo.mp3.mp3 */; };
@@ -60,6 +61,7 @@
 		0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinnigNode.m; path = UsefulClasses/SpinnigNode.m; sourceTree = "<group>"; };
 		0C346A5E1ACB21C700A05741 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		0C346A5F1ACB21C700A05741 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		0C40AF851ADAB24B00186FF1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0C79CF5B1AC9A824007DEE71 /* PopUpMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpMenu.h; sourceTree = "<group>"; };
 		0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpMenu.m; sourceTree = "<group>"; };
 		0C84C7071AC89D2000061EFB /* RoundedBackgroundLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedBackgroundLabelNode.h; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +199,7 @@
 		0CB7624B1ABC9BBF00A1BE30 = {
 			isa = PBXGroup;
 			children = (
+				0C40AF851ADAB24B00186FF1 /* GameKit.framework */,
 				0CB762561ABC9BBF00A1BE30 /* SupernovaProject */,
 				0CB762751ABC9BBF00A1BE30 /* SupernovaProjectTests */,
 				0CB762551ABC9BBF00A1BE30 /* Products */,
@@ -318,7 +322,7 @@
 						DevelopmentTeam = U5ZZWN44AH;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
