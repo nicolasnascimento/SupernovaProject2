@@ -36,7 +36,6 @@
 
 bool paused = NO;
 
-
 -(void)didMoveToView:(SKView *)view {
 
     if( self.level <= 0 )
@@ -65,9 +64,9 @@ bool paused = NO;
 
 -(void)setLevel1{
     
-    if( self.levelInfo == nil ){
+    if( self.levelInfo == nil ) {
         self.levelInfo = [LevelInfo defaultLevelInfo];
-    }else{
+    }else {
         self.levelInfo = [LevelInfo defaultLevelInfoWithLevel:self.levelInfo.currentLevel+1
                                                         score:self.levelInfo.currentScore
                                                spinningPeriod:self.levelInfo.spinningPeriod*0.9];
@@ -186,7 +185,6 @@ bool paused = NO;
     
     CGFloat realOffset = self.centerNode.radius/2;
     
-    //for( int i = 0; i < amount; i++ ){
     while( realOffset < self.frame.size.width/2 ){
         CGFloat radius = [self generateRandomRadiusWithMaximumRadius:self.levelInfo.spinningNodesRadius*2 Minimum:self.levelInfo.spinningNodesRadius range:10];
         realOffset += radius*offset;
@@ -364,6 +362,7 @@ bool paused = NO;
         [self highlightCurrentPlanet];
     }
 }
+
 -(void)unhighlightCurrentPlanet{
     if( self.levelInfo.currentOrbit < self.spinnigPlanets.count ){
         Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit];
@@ -400,6 +399,7 @@ bool paused = NO;
         Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit];
         if( p ){
             [p stopPlanetSpinning];
+            [p fitToSafeSpot];
         }
     }
 }

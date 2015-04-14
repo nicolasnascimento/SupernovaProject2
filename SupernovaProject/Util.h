@@ -20,7 +20,6 @@
 @end
 
 @implementation SKScene (Unarchive)
-
 + (instancetype)unarchiveFromFile:(NSString *)file {
     /* Retrieve scene file path from the application bundle */
     NSString *nodePath = [[NSBundle mainBundle] pathForResource:file ofType:@"sks"];

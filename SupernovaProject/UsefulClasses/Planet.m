@@ -92,6 +92,23 @@
     }
 }
 
+-(void)fitToSafeSpot{
+    CGPoint planetPositionInSceneWithParentCoordinateSystem = [self.planet.scene convertPoint:self.planet.position fromNode:self.planet.parent];
+    CGPoint safeSpotPositionInSceneWithParentCoordinateSystem = [self.safeSpot.scene convertPoint:self.safeSpot.position fromNode:self.safeSpot.parent];
+    
+    CGFloat planetAngle = atan2(planetPositionInSceneWithParentCoordinateSystem.x, planetPositionInSceneWithParentCoordinateSystem.y);
+    CGFloat safeSpotAngle = atan2(safeSpotPositionInSceneWithParentCoordinateSystem.x, safeSpotPositionInSceneWithParentCoordinateSystem.y);
+    
+    if( planetAngle < 0 )
+        planetAngle =  2*M_PI + planetAngle;
+    if( safeSpotAngle < 0 )
+        safeSpotAngle = 2*M_PI + safeSpotAngle;
+    
+    CGFloat delta = -(safeSpotAngle - planetAngle);
+    [self.spinningObjectsAnchor runAction:[SKAction rotateByAngle:delta duration:0]];
+    
+}
+
 -(BOOL)planetIsInsideSafeSpot{
     CGPoint planetPositionInSceneWithParentCoordinateSystem = [self.planet.scene convertPoint:self.planet.position fromNode:self.planet.parent];
     CGPoint safeSpotPositionInSceneWithParentCoordinateSystem = [self.safeSpot.scene convertPoint:self.safeSpot.position fromNode:self.safeSpot.parent];

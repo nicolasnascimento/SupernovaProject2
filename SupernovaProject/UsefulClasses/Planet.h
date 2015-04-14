@@ -29,5 +29,6 @@
 -(void)stopPlanetSpinning;
 -(void)highlightOrbitWithGlowWidth:(CGFloat)glowWidth;
 -(void)unhighlight;
+-(void)fitToSafeSpot;
 
 @end
