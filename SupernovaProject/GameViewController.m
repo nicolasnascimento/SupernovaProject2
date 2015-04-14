@@ -39,6 +39,9 @@
     [skView presentScene:scene];
 }
 
+-(void) viewWillLayoutSubviews{
+}
+
 
 -(void)setGameCenter{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
