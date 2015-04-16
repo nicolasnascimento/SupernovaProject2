@@ -18,6 +18,7 @@
 #import "GameViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <GameKit/GameKit.h>
+#import "GameViewController.h"
 
 @interface GameScene()
 
@@ -33,12 +34,13 @@
 
 @implementation GameScene
 
-
+int adCount = 0;
 bool paused = NO;
 
-
 -(void)didMoveToView:(SKView *)view {
+    
 
+    
     if( self.level <= 0 )
         self.level= 1;
     
@@ -65,9 +67,9 @@ bool paused = NO;
 
 -(void)setLevel1{
     
-    if( self.levelInfo == nil ){
+    if( self.levelInfo == nil ) {
         self.levelInfo = [LevelInfo defaultLevelInfo];
-    }else{
+    }else {
         self.levelInfo = [LevelInfo defaultLevelInfoWithLevel:self.levelInfo.currentLevel+1
                                                         score:self.levelInfo.currentScore
                                                spinningPeriod:self.levelInfo.spinningPeriod*0.9];
@@ -125,7 +127,7 @@ bool paused = NO;
     }
 
     self.levelNode = [self generateLabelNodeWithString:[NSString stringWithFormat:@"Level %ld",(long)self.levelInfo.currentLevel]];
-    self.levelNode.position = CGPointMake(0, -self.frame.size.height/2 + self.levelNode.frame.size.height*1.1);
+    self.levelNode.position = CGPointMake(0, -self.frame.size.height/2.2 + self.levelNode.frame.size.height*1.1);
     [self addChild:self.levelNode];
     
     
@@ -186,9 +188,8 @@ bool paused = NO;
     
     CGFloat realOffset = self.centerNode.radius/2;
     
-    //for( int i = 0; i < amount; i++ ){
     while( realOffset < self.frame.size.width/2 ){
-        CGFloat radius = [self generateRandomRadiusWithMaximumRadius:self.levelInfo.spinningNodesRadius*2 Minimum:self.levelInfo.spinningNodesRadius range:10];
+        CGFloat radius = [self generateRandomRadiusWithMaximumRadius:self.levelInfo.spinningNodesRadius*2 Minimum:self.levelInfo.spinningNodesRadius range:2];
         realOffset += radius*offset;
         
         OrbitNode *orbit = [[OrbitNode alloc] initWithRadius:realOffset color:[self randomColor] lineWidth:1];
@@ -255,6 +256,14 @@ bool paused = NO;
         }else{
             NSLog(@"Error Loading Score");
         }
+    }
+}
+
+-(void)showAd{
+    GameViewController *rootViewController =(GameViewController*) self.view.window.rootViewController;
+    if ([rootViewController.interstitial isReady]) {
+        [rootViewController.interstitial presentFromRootViewController:rootViewController];
+        [rootViewController setupAd];
     }
 }
 
@@ -364,6 +373,7 @@ bool paused = NO;
         [self highlightCurrentPlanet];
     }
 }
+
 -(void)unhighlightCurrentPlanet{
     if( self.levelInfo.currentOrbit < self.spinnigPlanets.count ){
         Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit];
@@ -390,7 +400,13 @@ bool paused = NO;
         }
         [self showPopUpMenu];
         [self saveScore];
+        adCount++;
+        if (adCount == 3){
+            adCount = 0;
+            [self showAd];
+        }
         self.levelInfo = nil;
+        
     }
 }
 
@@ -400,6 +416,7 @@ bool paused = NO;
         Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit];
         if( p ){
             [p stopPlanetSpinning];
+            [p fitToSafeSpot];
         }
     }
 }

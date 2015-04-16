@@ -18,13 +18,13 @@
 
 @interface StartMenuScene()
 
-/*@property (nonatomic) SKNode *startButton;
+@property (nonatomic) SKNode *startButton;
 @property (nonatomic) SKNode *scoreButton;
-@property (nonatomic) SKNode *settingsButton;*/
+@property (nonatomic) SKNode *settingsButton;
 @property (nonatomic) SKSpriteNode *title;
-@property (nonatomic) RoundedBackgroundLabelNode *startButton;
+/*@property (nonatomic) RoundedBackgroundLabelNode *startButton;
 @property (nonatomic) RoundedBackgroundLabelNode *scoreButton;
-@property (nonatomic) RoundedBackgroundLabelNode *settingsButton;
+@property (nonatomic) RoundedBackgroundLabelNode *settingsButton;*/
 @property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
 
 
@@ -57,17 +57,20 @@
     
     self.scene.backgroundColor = [SKColor blackColor];
     self.anchorPoint = CGPointMake(0.5,0.5);
+
     
-    SKColor* blue = [SKColor colorWithRed:50.0/255.0 green:106.0/255.0 blue:145.0/255.0 alpha:1];
-    SKColor* orange = [SKColor colorWithRed:243.0/255.0 green:60.0/255.0 blue:0.0/255.0 alpha:1];
+    self.startButton = [SKSpriteNode spriteNodeWithImageNamed:@"goButton"];
+    self.startButton.xScale = self.startButton.yScale = 0.5;
+    self.startButton.name = @"Play";
+
     
-    self.startButton = [[RoundedBackgroundLabelNode alloc] initWithText:@"Play" textColor:blue backgroundColor:[SKColor whiteColor] textOffsetToMargin:1 font:[Colors font] fontSize:64];
-    self.startButton.name = self.startButton.label.name = @"Play";
-    self.scoreButton = [[RoundedBackgroundLabelNode alloc] initWithText:@"Ranking" textColor:[SKColor whiteColor] backgroundColor:orange textOffsetToMargin:1 font:@"Bangla Sangam MN" fontSize:28];
-    self.scoreButton.name = self.scoreButton.label.name = @"Ranking";
+    self.scoreButton = [SKSpriteNode spriteNodeWithImageNamed:@"rankingIcon2-1"];
+    self.scoreButton.xScale = self.scoreButton.yScale = 0.5;
+    self.scoreButton.name = @"Ranking";
     
-    self.settingsButton = [[RoundedBackgroundLabelNode alloc] initWithText:(self.backgroundMusicPlayer.isPlaying ? @"Sound" : @"No Sound") textColor:blue backgroundColor:[SKColor whiteColor] textOffsetToMargin:1 font:@"Bangla Sangam MN" fontSize:16];
-    self.settingsButton.name = self.settingsButton.label.name = @"Sound";
+    self.settingsButton = [SKSpriteNode spriteNodeWithImageNamed:(self.backgroundMusicPlayer.isPlaying ? @"unmuteIcon" : @"mute")];
+    self.settingsButton.xScale = self.settingsButton.yScale = 0.4;
+    self.settingsButton.name = @"Sound";
 
     
     self.startButton.position = CGPointMake(0, self.frame.size.height/8);
@@ -130,8 +133,8 @@
 }
 
 -(void)startPlayMusic{
-    if( !self.firstTime )
-        _isMusicPlaying = YES;
+    //if( !self.firstTime )
+      //  _isMusicPlaying = YES;
     NSError *error;
     NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"telainicio1" withExtension:@"mp3"];
     self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
@@ -164,18 +167,27 @@
         
         if( [node.name isEqualToString:@"Sound"] ){
             if(_isMusicPlaying){
-                //[self.backgroundMusicPlayer stop];
-                [self stopPlayMusic];
                 _isMusicPlaying = NO;
-                self.settingsButton.label.text = @"No Sound";
+                [self stopPlayMusic];
+                [self recreateSettingsButtonWithName:@"mute"];
             }else {
-                //[self.backgroundMusicPlayer play];
                 _isMusicPlaying = YES;
-                self.settingsButton.label.text = @"Sound";
                 [self startPlayMusic];
+                [self recreateSettingsButtonWithName:@"unmuteIcon"];
+                
             }
         }
     }
+}
+
+-(void)recreateSettingsButtonWithName:(NSString *)name{
+    self.settingsButton.removeFromParent;
+    self.settingsButton = [SKSpriteNode spriteNodeWithImageNamed:name];
+    self.settingsButton.name = @"Sound";
+    self.settingsButton.zPosition = 50;
+    self.settingsButton.xScale = self.settingsButton.yScale = 0.4;
+    self.settingsButton.position = CGPointMake(0 , (self.scoreButton.position.y - self.scoreButton.frame.size.height/2 - self.settingsButton.frame.size.height/2) * BUTTON_OFFSET);
+    [self addChild:self.settingsButton];
 }
 
 

@@ -32,15 +32,18 @@
     
     [self createButtonWithImageName:@"levelButton" ratio:0.1 yRatio:-4];
     [self createButtonWithImageName:@"restartButton" ratio:0.19 yRatio:-1.25];
+    
     self.score = [[RoundedBackgroundLabelNode alloc] initWithText:@"0" textColor:[SKColor whiteColor] backgroundColor:[Colors orangeColor] textOffsetToMargin:2.3 font:[Colors font] fontSize:fontSize];
     [self addChild:self.score];
+    
+    [self createButtonWithImageName:@"scoreButton" ratio:0.12 yRatio:3.2];
+    [self createButtonWithImageName:@"gameOverLabel" ratio:0.55 yRatio:1.1];
+    
     self.level = [SKLabelNode labelNodeWithText:@"Level Reached: 0"];
     self.level.fontName = [Colors font];
     self.level.fontSize = fontSize/4;
     self.level.fontColor = [SKColor whiteColor];
-    self.level.position = CGPointMake(0, self.level.frame.size.height + self.score.frame.size.height/2);
-    [self createButtonWithImageName:@"scoreButton" ratio:0.12 yRatio:3.2];
-    [self createButtonWithImageName:@"gameOverLabel" ratio:0.55 yRatio:1.1];
+    self.level.position = CGPointMake(0, self.level.frame.size.height + self.score.frame.size.height/2.5);
     [self addChild:self.level];
 }
 

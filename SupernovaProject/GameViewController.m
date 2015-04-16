@@ -5,6 +5,8 @@
 //  Created by Nicolas Nascimento on 20/03/15.
 //  Copyright (c) 2015 NotACompany. All rights reserved.
 //
+@import GoogleMobileAds;
+
 
 #import "GameViewController.h"
 #import "GameScene.h"
@@ -20,27 +22,45 @@
     
     [self setGameCenter];
     [self setUpScene];
+    
+    self.bannerView.adUnitID = @"ca-app-pub-8789333906443858/4175135124";
+    self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
+    
+    [self setupAd];
+    
 }
+
+-(void)setupAd{
+    self.interstitial = [[GADInterstitial alloc] init];
+    self.interstitial.adUnitID = @"ca-app-pub-8789333906443858/5931069920";
+    
+    GADRequest *request = [GADRequest request];
+    // Requests test ads on test devices.
+    request.testDevices = @[@"2077ef9a63d2b398840261c8221a0c9b"];
+    [self.interstitial loadRequest:request];
+}
+
 
 -(void)setUpScene{
     // Configure the view.
     SKView * skView = (SKView *)self.view;
-    //skView.showsFPS = YES;
-    //skView.showsNodeCount = YES;
-    /* Sprite Kit applies additional optimizations to improve rendering performance */
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    StartMenuScene *scene = /*[[StartMenuScene alloc] initWithSize:self.view.frame.size];*/[StartMenuScene unarchiveFromFile:@"StartScene"];
+    StartMenuScene *scene = [StartMenuScene unarchiveFromFile:@"StartScene"];
+
     
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    //scene.parent = self;
     
     // Present the scene.
     [skView presentScene:scene];
+    //gameScene.delegateContainerViewController=self;
+
+    
 }
 
--(void) viewWillLayoutSubviews{
-}
 
 
 -(void)setGameCenter{

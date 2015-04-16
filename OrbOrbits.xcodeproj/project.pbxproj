@@ -27,10 +27,10 @@
 		0CB762621ABC9BBF00A1BE30 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762611ABC9BBF00A1BE30 /* GameScene.sks */; };
 		0CB762651ABC9BBF00A1BE30 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762641ABC9BBF00A1BE30 /* GameViewController.m */; };
 		0CB762681ABC9BBF00A1BE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762661ABC9BBF00A1BE30 /* Main.storyboard */; };
-		0CB7626A1ABC9BBF00A1BE30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB762691ABC9BBF00A1BE30 /* Images.xcassets */; };
 		0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */; };
 		0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */; };
-		D498E5B81ADD980600FD5B46 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498E5B71ADD980600FD5B46 /* iAd.framework */; };
+		0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC5A211ADD9F17003BFF23 /* Images.xcassets */; };
+		D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */; };
 		D4C1D8E21AC48E7C00B46607 /* IndexShapeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */; };
 		F4FC16931ACAF69B00E6B860 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC168F1ACAF69B00E6B860 /* 001.mp3 */; };
 		F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16901ACAF69B00E6B860 /* 002.mp3 */; };
@@ -86,12 +86,12 @@
 		0CB762631ABC9BBF00A1BE30 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		0CB762641ABC9BBF00A1BE30 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		0CB762671ABC9BBF00A1BE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CB762691ABC9BBF00A1BE30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0CB7626C1ABC9BBF00A1BE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0CB762721ABC9BBF00A1BE30 /* OrbOrbitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbOrbitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB762771ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupernovaProjectTests.m; sourceTree = "<group>"; };
-		D498E5B71ADD980600FD5B46 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0CEC5A211ADD9F17003BFF23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D4C1D8E01AC48E7C00B46607 /* IndexShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexShapeNode.h; sourceTree = "<group>"; };
 		D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexShapeNode.m; sourceTree = "<group>"; };
 		F4FC168F1ACAF69B00E6B860 /* 001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001.mp3; sourceTree = SOURCE_ROOT; };
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D498E5B81ADD980600FD5B46 /* iAd.framework in Frameworks */,
+				D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */,
 				0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,8 +192,8 @@
 		0C7A953C1AC063760002B0CD /* StoryboardAndImages */ = {
 			isa = PBXGroup;
 			children = (
+				0CEC5A211ADD9F17003BFF23 /* Images.xcassets */,
 				0CB762661ABC9BBF00A1BE30 /* Main.storyboard */,
-				0CB762691ABC9BBF00A1BE30 /* Images.xcassets */,
 				0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */,
 			);
 			name = StoryboardAndImages;
@@ -202,7 +202,7 @@
 		0CB7624B1ABC9BBF00A1BE30 = {
 			isa = PBXGroup;
 			children = (
-				D498E5B71ADD980600FD5B46 /* iAd.framework */,
+				D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */,
 				0C40AF851ADAB24B00186FF1 /* GameKit.framework */,
 				0CB762561ABC9BBF00A1BE30 /* SupernovaProject */,
 				0CB762751ABC9BBF00A1BE30 /* SupernovaProjectTests */,
@@ -367,8 +367,8 @@
 				0C9020FD1ACAF4930033A2ED /* telaJogo.mp3.mp3 in Resources */,
 				F4FC169A1ACB0A6800E6B860 /* spark.png in Resources */,
 				F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */,
+				0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */,
 				F4FC16961ACAF69B00E6B860 /* wrong.mp3 in Resources */,
-				0CB7626A1ABC9BBF00A1BE30 /* Images.xcassets in Resources */,
 				0CB762621ABC9BBF00A1BE30 /* GameScene.sks in Resources */,
 				F4FC16991ACB0A6800E6B860 /* MyParticle.sks in Resources */,
 				F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */,
@@ -533,6 +533,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SupernovaProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OrbOrbits;
@@ -547,6 +551,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SupernovaProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OrbOrbits;

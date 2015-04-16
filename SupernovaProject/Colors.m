@@ -14,7 +14,7 @@
     return @"Bangla Sangam MN";
 }
 
-+(UIColor *)orangeColor{
++(SKColor *)orangeColor{
     return [SKColor colorWithRed:243.0/255.0 green:60.0/255.0 blue:0 alpha:1];
 }
 
