@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
     
+    
     [self setGameCenter];
     [self setUpScene];
     
@@ -28,7 +29,7 @@
     [self.bannerView loadRequest:[GADRequest request]];
     
     [self setupAd];
-    
+
 }
 
 -(void)setupAd{
@@ -88,7 +89,7 @@
 
 - (BOOL)shouldAutorotate
 {
-    return YES;
+    return NO;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
