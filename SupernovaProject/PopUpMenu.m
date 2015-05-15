@@ -32,6 +32,11 @@
     
     [self createButtonWithImageName:@"levelButton" ratio:0.1 yRatio:-4];
     [self createButtonWithImageName:@"restartButton" ratio:0.19 yRatio:-1.25];
+    [self createButtonWithImageName:@"resetWithVideoIcon" ratio:0.19 yRatio:-1.25];
+    SKSpriteNode* node = (SKSpriteNode*)[self.background childNodeWithName:@"restartButton"];
+    node.position = CGPointMake(node.position.x - node.frame.size.width/2, node.position.y);
+    node = (SKSpriteNode*)[self.background childNodeWithName:@"resetWithVideoIcon"];
+    node.position = CGPointMake(node.position.x + node.frame.size.width/2, node.position.y);
     
     self.score = [[RoundedBackgroundLabelNode alloc] initWithText:@"0" textColor:[SKColor whiteColor] backgroundColor:[Colors orangeColor] textOffsetToMargin:2.3 font:[Colors font] fontSize:fontSize];
     [self addChild:self.score];
