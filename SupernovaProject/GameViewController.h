@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import <GameKit/GameKit.h>
+#import <UnityAds/UnityAds.h>
 
 @import GoogleMobileAds;
 

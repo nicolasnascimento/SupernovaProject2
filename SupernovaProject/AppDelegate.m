@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GameViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[UnityAds sharedInstance] startWithGameId:@"39147"
+                             andViewController: (GameViewController *)self.window.rootViewController];
     return YES;
 }
 

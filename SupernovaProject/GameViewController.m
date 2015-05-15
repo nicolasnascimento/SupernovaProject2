@@ -29,6 +29,8 @@
     [self.bannerView loadRequest:[GADRequest request]];
     
     [self setupAd];
+    
+    [[UnityAds sharedInstance] setDelegate:self];
 
 }
 
