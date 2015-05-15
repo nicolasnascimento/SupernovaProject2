@@ -40,7 +40,7 @@
 
 -(void)didMoveToView:(SKView *)view{
     
-    
+
     if( !self.firstTime )
         _isMusicPlaying = YES;
     
@@ -90,26 +90,30 @@
     [self createTitle];
     
     [self addChild:background];
-    background.zPosition = 10;
-    
+    //background.zPosition = 10;
+//
     [self addChild:particles];
-    particles.zPosition = 20;
-    
+//    particles.zPosition = 20;
+//    
     [self addChild:self.startButton];
     self.startButton.zPosition = 30;
-    
+//
     [self addChild:self.scoreButton];
     self.scoreButton.zPosition = 40;
-    
+//
     [self addChild:self.settingsButton];
     self.settingsButton.zPosition = 50;
-    
+//
     [self addChild:self.title];
     self.title.zPosition = 60;
+
 }
 
 -(void)createTitle{
+
     self.title = [SKSpriteNode spriteNodeWithImageNamed:@"title"];
+
+    
     self.title.position = CGPointMake(0, self.frame.size.height/2 - self.title.frame.size.height*TITLE_OFFSET);
 }
 
