@@ -25,6 +25,7 @@
 @property (nonatomic) NSMutableArray *spinnigPlanets;
 @property (nonatomic) SpinnigNode *centerNode;
 @property (nonatomic) LevelInfo *levelInfo;
+@property (nonatomic) LevelInfo *oldLevelInfo;
 @property (nonatomic) RoundedBackgroundLabelNode *scoreNode;
 @property (nonatomic) SKLabelNode *levelNode;
 @property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
@@ -36,6 +37,7 @@
 
 int adCount = 0;
 bool paused = NO;
+bool hasWatchedAd = NO;
 
 -(void)didMoveToView:(SKView *)view {
     
@@ -67,12 +69,21 @@ bool paused = NO;
 
 -(void)setLevel1{
     
+    if( hasWatchedAd ){
+        self.levelInfo = self.oldLevelInfo;
+    }
+    
     if( self.levelInfo == nil ) {
         self.levelInfo = [LevelInfo defaultLevelInfo];
-    }else {
+        NSLog(@"creating level");
+    }else if( !hasWatchedAd ) {
+        NSLog(@"goint to next level");
         self.levelInfo = [LevelInfo defaultLevelInfoWithLevel:self.levelInfo.currentLevel+1
                                                         score:self.levelInfo.currentScore
                                                spinningPeriod:self.levelInfo.spinningPeriod*0.9];
+    }else{
+        hasWatchedAd = NO;
+        NSLog(@"has watched ad");
     }
     
     self.levelNode.text = [NSString stringWithFormat:@"Level %ld", (long)self.levelInfo.currentLevel];
@@ -122,7 +133,7 @@ bool paused = NO;
     [self generateSpinnigObjectWithAmount:self.levelInfo.spinningNodesInitialAmount
                                    Offset:self.levelInfo.spinningNodesInitialOffset];
     if( self.spinnigPlanets.count > 0 ){
-        Planet *p = self.spinnigPlanets[0];
+        Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit % self.spinnigPlanets.count];
         [p highlightOrbitWithGlowWidth:self.levelInfo.spinningNodesGlowWidth*3];
     }
 
@@ -259,6 +270,11 @@ bool paused = NO;
     }
 }
 
+-(void)showIncentivizedAd{
+    // MUDAR AQUI PARA MOSTRAR AD
+    [self showAd];
+}
+
 -(void)showAd{
     GameViewController *rootViewController =(GameViewController*) self.view.window.rootViewController;
     if ([rootViewController.interstitial isReady]) {
@@ -322,6 +338,11 @@ bool paused = NO;
         }else if( [node.name isEqualToString:@"restartButton"] ){
             paused = NO;
             [self setLevel1];
+        }else if( [node.name isEqualToString:@"resetWithVideoIcon"] && hasWatchedAd == NO ) {
+            paused = NO;
+            hasWatchedAd = YES;
+            [self showIncentivizedAd];
+            [self setLevel1];
         }else if( paused ){
             continue;
         }else if( self.levelInfo.currentOrbit == self.spinnigPlanets.count-1 ){
@@ -339,7 +360,6 @@ bool paused = NO;
             }
         }else{
             [self checkCurrentOrbit];
-            
         }
     }
     
@@ -398,14 +418,18 @@ bool paused = NO;
         if (_playingMusic) {
             [self runAction:[SKAction playSoundFileNamed:@"wrong.mp3" waitForCompletion:NO]];
         }
-        [self showPopUpMenu];
-        [self saveScore];
-        adCount++;
-        if (adCount == 3){
+        if( !hasWatchedAd ) {
+            NSLog(@"HAS WATCHED AD IN \"END CURRENT LEVEL\"");
+            [self showPopUpMenu];
+            [self saveScore];
+            adCount++;
+            if (adCount == 3){
             adCount = 0;
-            [self showAd];
+                [self showAd];
+            }
+            self.oldLevelInfo = self.levelInfo;
+            self.levelInfo = nil;
         }
-        self.levelInfo = nil;
         
     }
 }

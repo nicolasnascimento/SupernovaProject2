@@ -87,8 +87,6 @@
 //    [background addChild:particles];
     particles.alpha = 0.05;
     
-    //background.blendMode = SKBlendModeMultiply
-    
     [self createTitle];
     
     [self addChild:background];
