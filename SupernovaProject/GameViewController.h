@@ -13,7 +13,7 @@
 
 @import GoogleMobileAds;
 
-@interface GameViewController : UIViewController <GKGameCenterControllerDelegate, GADInterstitialDelegate>
+@interface GameViewController : UIViewController <GKGameCenterControllerDelegate, GADInterstitialDelegate, UnityAdsDelegate>
 
 @property BOOL playerIsAuthenticated;
 @property (strong, nonatomic) IBOutlet GADBannerView *bannerView;

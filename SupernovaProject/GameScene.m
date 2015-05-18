@@ -16,7 +16,6 @@
 #import "PopUpMenu.h"
 #import "Colors.h"
 #import "GameViewController.h"
-#import <AVFoundation/AVFoundation.h>
 #import <GameKit/GameKit.h>
 #import "GameViewController.h"
 
@@ -28,7 +27,6 @@
 @property (nonatomic) LevelInfo *oldLevelInfo;
 @property (nonatomic) RoundedBackgroundLabelNode *scoreNode;
 @property (nonatomic) SKLabelNode *levelNode;
-@property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
 
 @end
 
@@ -73,6 +71,13 @@ bool hasWatchedAd = NO;
         self.levelInfo = self.oldLevelInfo;
     }
     
+    if( !self.backgroundMusicPlayer.isPlaying ){
+        [self.backgroundMusicPlayer prepareToPlay];
+        if (!hasWatchedAd){
+            [self.backgroundMusicPlayer play];
+        }
+    }
+    
     if( self.levelInfo == nil ) {
         self.levelInfo = [LevelInfo defaultLevelInfo];
         NSLog(@"creating level");
@@ -94,10 +99,7 @@ bool hasWatchedAd = NO;
         self.scoreNode.text = [NSString stringWithFormat:@"%ld", (long)self.levelInfo.currentScore];
     }
 
-    if( !self.backgroundMusicPlayer.isPlaying ){
-        [self.backgroundMusicPlayer prepareToPlay];
-        [self.backgroundMusicPlayer play];
-    }
+    
     
     [self setCurrentLevel];
 }
@@ -271,8 +273,12 @@ bool hasWatchedAd = NO;
 }
 
 -(void)showIncentivizedAd{
-    // MUDAR AQUI PARA MOSTRAR AD
-    [self showAd];
+    [[UnityAds sharedInstance] setZone:@"rewardedVideoZone"];
+    
+    if ([[UnityAds sharedInstance] canShow] && [[UnityAds sharedInstance] canShowAds])
+    {
+        [[UnityAds sharedInstance] show];
+    }
 }
 
 -(void)showAd{
@@ -338,7 +344,7 @@ bool hasWatchedAd = NO;
         }else if( [node.name isEqualToString:@"restartButton"] ){
             paused = NO;
             [self setLevel1];
-        }else if( [node.name isEqualToString:@"resetWithVideoIcon"] && hasWatchedAd == NO ) {
+        }else if( [node.name isEqualToString:@"resetWithVideoIcon"] && hasWatchedAd == NO) {
             paused = NO;
             hasWatchedAd = YES;
             [self showIncentivizedAd];
@@ -423,7 +429,7 @@ bool hasWatchedAd = NO;
             [self showPopUpMenu];
             [self saveScore];
             adCount++;
-            if (adCount == 3){
+            if (adCount == 5){
             adCount = 0;
                 [self showAd];
             }

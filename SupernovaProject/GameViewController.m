@@ -64,7 +64,11 @@
     
 }
 
-
+-(void) unityAdsVideoCompleted:(NSString *)rewardItemKey skipped:(BOOL)skipped{
+    SKView * skView = (SKView *)self.view;
+    GameScene *scene = (GameScene *)skView.scene;
+    [scene.backgroundMusicPlayer play];
+}
 
 -(void)setGameCenter{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];

@@ -30,10 +30,10 @@
 		0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */; };
 		0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */; };
 		0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC5A211ADD9F17003BFF23 /* Images.xcassets */; };
-		D42B9E861B06651A0035ECDF /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D42B9E851B06651A0035ECDF /* UnityAds.bundle */; };
-		D42B9E8A1B0665CB0035ECDF /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42B9E891B0665CB0035ECDF /* UnityAds.framework */; };
+		D42B9E8C1B067D600035ECDF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42B9E8B1B067D600035ECDF /* StoreKit.framework */; };
 		D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */; };
 		D4C1D8E21AC48E7C00B46607 /* IndexShapeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */; };
+		D4C967D51B0A565D00BE9DC6 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */; };
 		F4FC16931ACAF69B00E6B860 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC168F1ACAF69B00E6B860 /* 001.mp3 */; };
 		F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16901ACAF69B00E6B860 /* 002.mp3 */; };
 		F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */; };
@@ -93,11 +93,11 @@
 		0CB762771ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupernovaProjectTests.m; sourceTree = "<group>"; };
 		0CEC5A211ADD9F17003BFF23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D42B9E851B06651A0035ECDF /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
-		D42B9E891B0665CB0035ECDF /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UnityAds.framework; path = UnityAds.bundle/UnityAds.framework; sourceTree = "<group>"; };
+		D42B9E8B1B067D600035ECDF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D4C1D8E01AC48E7C00B46607 /* IndexShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexShapeNode.h; sourceTree = "<group>"; };
 		D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexShapeNode.m; sourceTree = "<group>"; };
+		D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
 		F4FC168F1ACAF69B00E6B860 /* 001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001.mp3; sourceTree = SOURCE_ROOT; };
 		F4FC16901ACAF69B00E6B860 /* 002.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 002.mp3; sourceTree = SOURCE_ROOT; };
 		F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = telainicio1.mp3; sourceTree = SOURCE_ROOT; };
@@ -114,7 +114,8 @@
 			files = (
 				D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */,
 				0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */,
-				D42B9E8A1B0665CB0035ECDF /* UnityAds.framework in Frameworks */,
+				D42B9E8C1B067D600035ECDF /* StoreKit.framework in Frameworks */,
+				D4C967D51B0A565D00BE9DC6 /* UnityAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +208,8 @@
 		0CB7624B1ABC9BBF00A1BE30 = {
 			isa = PBXGroup;
 			children = (
-				D42B9E851B06651A0035ECDF /* UnityAds.bundle */,
-				D42B9E891B0665CB0035ECDF /* UnityAds.framework */,
+				D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */,
+				D42B9E8B1B067D600035ECDF /* StoreKit.framework */,
 				D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */,
 				0C40AF851ADAB24B00186FF1 /* GameKit.framework */,
 				0CB762561ABC9BBF00A1BE30 /* SupernovaProject */,
@@ -335,6 +336,9 @@
 							com.apple.GameCenter = {
 								enabled = 1;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 						};
 					};
 					0CB762711ABC9BBF00A1BE30 = {
@@ -376,7 +380,6 @@
 				F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */,
 				0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */,
 				F4FC16961ACAF69B00E6B860 /* wrong.mp3 in Resources */,
-				D42B9E861B06651A0035ECDF /* UnityAds.bundle in Resources */,
 				0CB762621ABC9BBF00A1BE30 /* GameScene.sks in Resources */,
 				F4FC16991ACB0A6800E6B860 /* MyParticle.sks in Resources */,
 				F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */,
