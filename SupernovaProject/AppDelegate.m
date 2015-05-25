@@ -33,7 +33,7 @@
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
     localNotification.userInfo = @{@"title" : @"something here"};
     
-    [application registerUserNotificationSettings:mySettings];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     return YES;
 }
 
