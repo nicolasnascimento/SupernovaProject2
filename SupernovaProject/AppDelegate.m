@@ -20,6 +20,20 @@
     
     [[UnityAds sharedInstance] startWithGameId:@"39147"
                              andViewController: (GameViewController *)self.window.rootViewController];
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"Test";
+    localNotification.alertAction = @"open";
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
+    localNotification.userInfo = @{@"title" : @"something here"};
+    
+    [application registerUserNotificationSettings:mySettings];
     return YES;
 }
 
