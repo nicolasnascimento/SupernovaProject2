@@ -135,7 +135,17 @@ bool hasWatchedAd = NO;
     [self generateSpinnigObjectWithAmount:self.levelInfo.spinningNodesInitialAmount
                                    Offset:self.levelInfo.spinningNodesInitialOffset];
     if( self.spinnigPlanets.count > 0 ){
-        Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit % self.spinnigPlanets.count];
+        Planet *p = nil;
+        p = self.spinnigPlanets[0];
+        self.levelInfo.currentOrbit = 0;
+        /*if(self.levelInfo.currentOrbit >= self.spinnigPlanets.count){
+            p = self.spinnigPlanets[self.levelInfo.currentOrbit % self.spinnigPlanets.count];
+            p = self.spinnigPlanets[0];
+            self.levelInfo.currentOrbit = 0;
+        }
+        else{
+            p = self.spinnigPlanets[self.levelInfo.currentOrbit];
+        }*/
         [p highlightOrbitWithGlowWidth:self.levelInfo.spinningNodesGlowWidth*3];
     }
 
@@ -345,14 +355,16 @@ bool hasWatchedAd = NO;
             paused = NO;
             [self setLevel1];
         }else if( [node.name isEqualToString:@"resetWithVideoIcon"] && hasWatchedAd == NO) {
+            NSLog(@"resetwithvideo");
             paused = NO;
             hasWatchedAd = YES;
             [self showIncentivizedAd];
             [self setLevel1];
         }else if( paused ){
+            NSLog(@"continue");
             continue;
         }else if( self.levelInfo.currentOrbit == self.spinnigPlanets.count-1 ){
-            
+            NSLog(@"lastorbit");
             Planet *p = self.spinnigPlanets[self.levelInfo.currentOrbit];
             if( [p planetIsInsideSafeSpot] ){
                 if( _playingMusic ){
@@ -365,6 +377,7 @@ bool hasWatchedAd = NO;
                 paused = YES;
             }
         }else{
+            NSLog(@"checkcurrentorbit");
             [self checkCurrentOrbit];
         }
     }
