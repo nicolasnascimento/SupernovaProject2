@@ -30,6 +30,7 @@
 		0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */; };
 		0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */; };
 		0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC5A211ADD9F17003BFF23 /* Images.xcassets */; };
+		D41997171B1630AB0004059B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41997161B1630AB0004059B /* StoreKit.framework */; };
 		D4762AE21B0F9065007CB8B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE11B0F9065007CB8B0 /* InterfaceController.swift */; };
 		D4762AE41B0F9065007CB8B0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE31B0F9065007CB8B0 /* NotificationController.swift */; };
 		D4762AE61B0F9065007CB8B0 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE51B0F9065007CB8B0 /* GlanceController.swift */; };
@@ -135,6 +136,7 @@
 		0CB762771ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupernovaProjectTests.m; sourceTree = "<group>"; };
 		0CEC5A211ADD9F17003BFF23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D41997161B1630AB0004059B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D4479AE41B138E1E00D47272 /* OrbOrbits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OrbOrbits.entitlements; sourceTree = "<group>"; };
 		D4479AE51B138EC400D47272 /* OrbOrbits WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "OrbOrbits WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D4762ADC1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OrbOrbits WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 			files = (
 				D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */,
 				D4C967D51B0A565D00BE9DC6 /* UnityAds.framework in Frameworks */,
+				D41997171B1630AB0004059B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +270,7 @@
 		0CB7624B1ABC9BBF00A1BE30 = {
 			isa = PBXGroup;
 			children = (
+				D41997161B1630AB0004059B /* StoreKit.framework */,
 				D4479AE41B138E1E00D47272 /* OrbOrbits.entitlements */,
 				D48287331B0A7B6C00C2E830 /* UnityAds.bundle */,
 				D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */,
@@ -470,16 +474,16 @@
 				TargetAttributes = {
 					0CB762531ABC9BBF00A1BE30 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = CF32H8XYHX;
+						DevelopmentTeam = Z83BJJ28JR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -490,9 +494,12 @@
 					};
 					D4762ADB1B0F9065007CB8B0 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = CF32H8XYHX;
+						DevelopmentTeam = Z83BJJ28JR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.GameCenter = {
 								enabled = 0;
 							};
 						};
@@ -751,6 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = OrbOrbits.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -772,6 +780,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = OrbOrbits.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -825,16 +834,18 @@
 		D4762AFA1B0F9065007CB8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OrbOrbits WatchKit Extension/OrbOrbits WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "OrbOrbits WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
@@ -846,12 +857,14 @@
 		D4762AFB1B0F9065007CB8B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OrbOrbits WatchKit Extension/OrbOrbits WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "OrbOrbits WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
@@ -867,6 +880,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -892,6 +906,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = OrbOrbits_WatchKit_Extension;
 				INFOPLIST_FILE = "OrbOrbits WatchKit App/Info.plist";
