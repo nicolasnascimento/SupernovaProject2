@@ -12,10 +12,15 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var imageGroup: WKInterfaceGroup!
+    @IBOutlet weak var scoreLabel: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        imageGroup.setBackgroundImageNamed("animation_")
+        scoreLabel.setText("17")
+        imageGroup.startAnimating()
     }
 
     override func willActivate() {
