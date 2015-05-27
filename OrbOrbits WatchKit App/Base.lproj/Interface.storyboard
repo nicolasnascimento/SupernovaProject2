@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="1" alignment="left" id="Zdj-1T-UPL">
+                        <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="Zdj-1T-UPL">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Label" id="T0v-74-RWf">
                                     <fontDescription key="font" type="italicSystem" pointSize="32"/>

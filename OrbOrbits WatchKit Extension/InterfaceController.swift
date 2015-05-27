@@ -18,7 +18,7 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        imageGroup.setBackgroundImageNamed("animation_")
+        imageGroup.setBackgroundImageNamed("WKAppAnimation_")
         scoreLabel.setText("17")
         imageGroup.startAnimating()
     }
