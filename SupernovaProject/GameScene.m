@@ -37,6 +37,7 @@ int adCount = 0;
 bool paused = NO;
 bool hasWatchedAd = NO;
 
+
 -(void)didMoveToView:(SKView *)view {
     
 
@@ -261,19 +262,40 @@ bool hasWatchedAd = NO;
     GameViewController *rootViewController =(GameViewController*) self.view.window.rootViewController;
     if( rootViewController.playerIsAuthenticated ){
         // Name for ranking created at iTunes Connect
-        NSString *leaderboardIdentifier = @"GeneralRanking";
+        NSString *leaderboardIdentifier = @"grp.GeneralRanking";
         
         GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:leaderboardIdentifier];
+        GKLeaderboard *leaderboardRequest = [[GKLeaderboard alloc]init];
+        leaderboardRequest.identifier = leaderboardIdentifier;
+        
+
+        
         if( score ){
             NSLog(@"Score");
             score.value = self.levelInfo.currentScore;
             score.context = 0;
+            NSInteger thisScore = self.levelInfo.currentScore;
             
             [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
                 if( error ){
                     NSLog(@"ERROR REPORTING SCORE\n%@",error);
                 }else{
                     NSLog(@"SUCESS REPORTING SCORE");
+                    [leaderboardRequest loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
+                        if (error) {
+                            NSLog(@"%@", error);
+                        } else if (scores) {
+                            NSLog(@"SAVED");
+                            GKScore *bestScore = leaderboardRequest.localPlayerScore;
+                            if (thisScore > bestScore.value) {
+                                bestScore.value = thisScore;
+                            }
+                            NSUserDefaults *data = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.supernova.OrbitAll"];
+                            [data setObject:[NSNumber numberWithInteger:bestScore.value] forKey:[NSString stringWithFormat:@"local"]];
+                            [data synchronize];
+                        }
+                    }];
+                    
                 }
             }];
         }else{
