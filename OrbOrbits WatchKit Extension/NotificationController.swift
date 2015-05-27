@@ -45,7 +45,7 @@ class NotificationController: WKUserNotificationInterfaceController {
             }
         }
         self.notificationImage.setImageNamed("animacao")
-        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 30), duration: 1, repeatCount: Int.max)
+        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 29), duration: 1, repeatCount: 1)
         completionHandler(.Custom)
     }
     
@@ -63,7 +63,7 @@ class NotificationController: WKUserNotificationInterfaceController {
             self.notificationText.setText("Your Orbits Are Missing You!")
         }
         self.notificationImage.setImageNamed("animacao")
-        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 30), duration: 1, repeatCount: Int.max)
+        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 30), duration: 1, repeatCount: 1)
         println(remoteNotification)
         completionHandler(.Custom)
     }

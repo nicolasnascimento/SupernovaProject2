@@ -46,6 +46,7 @@
     localNotification.userInfo = @{@"notification Text" : @"Your Orbits Are Missing You!"};
     localNotification.category = @"aCategory";
     
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
     return YES;

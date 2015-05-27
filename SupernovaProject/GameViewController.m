@@ -101,7 +101,7 @@
                 if( score ){
                     score.context = 0;
                 }
-                //NSLog(@"Local player's score: %@", score.player.alias);
+                NSLog(@"GKScore: %@", score);
                 
                 NSUserDefaults *data = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.supernova.OrbitAll"];
                 [data setObject:[NSNumber numberWithInteger:score.value] forKey:[NSString stringWithFormat:@"score%d",i]];

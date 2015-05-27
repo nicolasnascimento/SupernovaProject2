@@ -33,7 +33,7 @@ class GlanceController: WKInterfaceController {
                 println(value)
                 var a = String(value)
             }
-            if let strValue = data.objectForKey(nameStr as String) as? String{
+            if let strValue = data.objectForKey(nameStr as String) as? String {
                 name = strValue
             }
             

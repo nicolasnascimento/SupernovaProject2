@@ -57,7 +57,7 @@
                 <notificationController id="YCC-NB-fut">
                     <items>
                         <label width="1" alignment="center" text="Your Orbits Are Missing You!" textAlignment="center" numberOfLines="0" id="XkS-y5-khE"/>
-                        <imageView width="1" height="80" alignment="left" image="animacao30" id="Jyy-af-gdF"/>
+                        <imageView width="1" height="80" alignment="left" image="animacao29" contentMode="scaleAspectFit" id="Jyy-af-gdF"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="aCategory" id="JfB-70-Muf"/>
                     <connections>
@@ -73,7 +73,7 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView width="1" height="53.5" alignment="center" image="animacao30" id="DV0-SI-gcr"/>
+                        <imageView width="1" height="91.5" alignment="center" image="animacao29" contentMode="scaleAspectFit" id="DV0-SI-gcr"/>
                         <label alignment="left" text="NotificationText" numberOfLines="0" id="8u9-J7-2zj">
                             <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </label>
@@ -84,7 +84,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="493" y="927"/>
+            <point key="canvasLocation" x="493" y="944.25"/>
         </scene>
     </scenes>
 </document>
