@@ -34,23 +34,35 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                        <label width="1" alignment="center" text="Your Orbits Are Missing You!" textAlignment="center" numberOfLines="0" id="XkS-y5-khE"/>
+                        <imageView width="1" height="80" alignment="left" image="animacao30" id="Jyy-af-gdF"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="aCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
                         <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="235" y="961.75"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="1" height="53.5" alignment="center" image="animacao30" id="DV0-SI-gcr"/>
+                        <label alignment="left" text="NotificationText" numberOfLines="0" id="8u9-J7-2zj">
+                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="notificationImage" destination="DV0-SI-gcr" id="jrq-Gb-llL"/>
+                        <outlet property="notificationText" destination="8u9-J7-2zj" id="id5-Rc-WOi"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="493" y="927"/>
         </scene>
     </scenes>
 </document>

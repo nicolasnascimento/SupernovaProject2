@@ -17,25 +17,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
     [[UnityAds sharedInstance] startWithGameId:@"39147"
                              andViewController: (GameViewController *)self.window.rootViewController];
+
+    UIMutableUserNotificationAction* accept = [[UIMutableUserNotificationAction alloc] init];
+    accept.title = @"Play";
+    accept.identifier = @"acceptAction";
+    accept.destructive = false;
+    accept.activationMode = UIUserNotificationActionContextDefault;
+    accept.authenticationRequired = NO;
+    
+    UIMutableUserNotificationCategory* category = [[UIMutableUserNotificationCategory alloc] init];
+    [category setActions:@[accept] forContext:UIUserNotificationActionContextDefault];
+    category.identifier = @"aCategory";
+    
+    NSMutableSet* categories = [[NSMutableSet alloc] initWithArray:@[category]];
     
     UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-    
-    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    localNotification.alertBody = @"Test";
+    localNotification.alertTitle = @"OrbOrbits News";
+    localNotification.alertBody = @"Your Orbits Are Missing You";
     localNotification.alertAction = @"open";
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
-    localNotification.userInfo = @{@"title" : @"something here"};
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30/*25200*/];
+    localNotification.userInfo = @{@"notification Text" : @"Your Orbits Are Missing You!"};
+    localNotification.category = @"aCategory";
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
     return YES;
 }
+
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler{
+    NSLog(@"handling completion action");
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

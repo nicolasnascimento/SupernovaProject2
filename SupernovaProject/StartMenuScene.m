@@ -183,7 +183,7 @@
 }
 
 -(void)recreateSettingsButtonWithName:(NSString *)name{
-    self.settingsButton.removeFromParent;
+    [self.settingsButton removeFromParent];
     self.settingsButton = [SKSpriteNode spriteNodeWithImageNamed:name];
     self.settingsButton.name = @"Sound";
     self.settingsButton.zPosition = 50;

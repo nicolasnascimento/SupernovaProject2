@@ -12,6 +12,8 @@ import Foundation
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+    @IBOutlet weak var notificationText: WKInterfaceLabel!
+    @IBOutlet weak var notificationImage: WKInterfaceImage!
     override init() {
         // Initialize variables here.
         super.init()
@@ -29,25 +31,40 @@ class NotificationController: WKUserNotificationInterfaceController {
         super.didDeactivate()
     }
 
-    /*
     override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         // This method is called when a local notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
         //
         // After populating your dynamic notification interface call the completion block.
+        if let userInfo = localNotification.userInfo {
+            if let text = userInfo["notificationText"] as? String {
+                 self.notificationText.setText(text)
+            }else{
+                self.notificationText.setText("Your Orbits Are Missing You!")
+            }
+        }
+        self.notificationImage.setImageNamed("animacao")
+        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 30), duration: 1, repeatCount: Int.max)
         completionHandler(.Custom)
     }
-    */
     
-    /*
+    
     override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         // This method is called when a remote notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
         //
         // After populating your dynamic notification interface call the completion block.
+        //self.notificationText.setText(remoteNotification["notificationText"] as? String)
+        if let text = remoteNotification["notificationText"] as? String {
+            self.notificationText.setText(text)
+        }else{
+            self.notificationText.setText("Your Orbits Are Missing You!")
+        }
+        self.notificationImage.setImageNamed("animacao")
+        self.notificationImage.startAnimatingWithImagesInRange(NSRange(location: 0, length: 30), duration: 1, repeatCount: Int.max)
+        println(remoteNotification)
         completionHandler(.Custom)
     }
-    */
 }
