@@ -17,14 +17,36 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="Label" id="NgK-0g-xba"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
-                                <label alignment="left" text="Label" id="Qse-zD-3ZE"/>
+                                <table alignment="left" id="5tL-78-2ox">
+                                    <items>
+                                        <tableRow identifier="scoreRow" id="sEd-3u-Df7" customClass="scoreRow" customModule="OrbOrbits_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" id="niB-xa-WDE">
+                                                <items>
+                                                    <label alignment="right" verticalAlignment="center" text="Label" id="Hr1-IE-N7z"/>
+                                                    <label width="76.5" alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="T3f-TY-2u7"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="nameLbl" destination="T3f-TY-2u7" id="EbL-v1-vQM"/>
+                                                <outlet property="scoreLbl" destination="Hr1-IE-N7z" id="Tv5-Wm-rGq"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="scoresTable" destination="5tL-78-2ox" id="0hc-ie-pbL"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
