@@ -23,6 +23,7 @@
     
     [self setGameCenter];
     [self setUpScene];
+    [self setLeaderboard];
     
     self.bannerView.adUnitID = @"ca-app-pub-8789333906443858/4175135124";
     self.bannerView.rootViewController = self;
@@ -86,6 +87,31 @@
             NSLog(@"%@",error);
         }
     };
+}
+
+-(void)setLeaderboard{
+    GKLeaderboard *leaderboardRequest = [[GKLeaderboard alloc] init];
+    leaderboardRequest.identifier = @"grp.GeneralRanking";
+    [leaderboardRequest loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else if (scores) {
+            for (int i=0; i<leaderboardRequest.scores.count && i < 3; i++) {
+                GKScore *score = scores[i];
+                if( score ){
+                    score.context = 0;
+                }
+                //NSLog(@"Local player's score: %@", score.player.alias);
+                
+                NSUserDefaults *data = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.supernova.OrbitAll"];
+                [data setObject:[NSNumber numberWithInteger:score.value] forKey:[NSString stringWithFormat:@"score%d",i]];
+                [data setObject:score.player.alias forKey:[NSString stringWithFormat:@"name%d",i]];
+                [data synchronize];
+                
+                
+            }
+        }
+    }];
 }
 
 -(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
