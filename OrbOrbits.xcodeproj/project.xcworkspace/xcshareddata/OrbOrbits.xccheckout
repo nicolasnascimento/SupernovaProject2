@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>228692F1-17EA-44B4-AAFE-B6B2DAC1933A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>OrbOrbits</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>44F6252680C588DD800F81161EA2514FAF47E5E2</key>
 		<string>https://github.com/nicolasnascimento/SupernovaProject2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OrbOrbits.xcodeproj</string>
+	<string>OrbOrbits.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>44F6252680C588DD800F81161EA2514FAF47E5E2</key>

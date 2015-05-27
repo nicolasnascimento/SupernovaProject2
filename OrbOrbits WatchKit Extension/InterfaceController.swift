@@ -18,8 +18,13 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        let appGroupID = "group.com.supernova.OrbitAll"
+        let data = NSUserDefaults(suiteName: appGroupID)!
+        
         imageGroup.setBackgroundImageNamed("WKAppAnimation_")
-        scoreLabel.setText("17")
+        if let nsvalue = data.objectForKey("local") as? NSNumber {
+            scoreLabel.setText(nsvalue.stringValue)
+        }
         imageGroup.startAnimating()
     }
 
