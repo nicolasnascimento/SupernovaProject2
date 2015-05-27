@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - OrbOrbits WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Notification - OrbOrbits WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>OrbOrbits WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>OrbOrbits.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>SupernovaProject.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>0CB762711ABC9BBF00A1BE30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4762AEA1B0F9065007CB8B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

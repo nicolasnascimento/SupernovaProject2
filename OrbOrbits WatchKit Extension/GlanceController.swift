@@ -41,7 +41,7 @@ class GlanceController: WKInterfaceController {
                 row.scoreLbl.setText(String(format:"%ld", value))
                 row.nameLbl.setText(name)
             }
-            
+        
 //            var str = NSString(format:"name%d", i)
 //            var value : String = ""
 //            if let nsvalue = data.objectForKey(str as String) as? NSNumber {
