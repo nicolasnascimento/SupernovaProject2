@@ -19,7 +19,9 @@
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y">
                             <items>
-                                <label alignment="left" text="Label" id="NgK-0g-xba"/>
+                                <label alignment="left" text="Highscores" minimumScaleFactor="0.99999999999999989" id="NgK-0g-xba">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
                             </items>
                         </group>
                         <group alignment="left" id="uCw-4Q-Ouw">
