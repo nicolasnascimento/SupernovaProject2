@@ -8,7 +8,21 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OrbOrbits_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" id="Zdj-1T-UPL">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="T0v-74-RWf">
+                                    <fontDescription key="font" type="italicSystem" pointSize="32"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="imageGroup" destination="Zdj-1T-UPL" id="912-gq-w62"/>
+                        <outlet property="scoreLabel" destination="T0v-74-RWf" id="DoE-9t-OY0"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
@@ -21,6 +35,7 @@
                             <items>
                                 <label alignment="left" text="Label" id="NgK-0g-xba"/>
                             </items>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </group>
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>

@@ -13,7 +13,6 @@
 		0C1DD0CA1AC5B5E600DF1339 /* SpinnigNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DD0C61AC5B5E600DF1339 /* SpinnigNode.m */; };
 		0C279E831B14E4BB00F036C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C279E821B14E4BB00F036C7 /* Images.xcassets */; };
 		0C346A601ACB21C700A05741 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C346A5F1ACB21C700A05741 /* Colors.m */; };
-		0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C40AF851ADAB24B00186FF1 /* GameKit.framework */; };
 		0C79CF5D1AC9A824007DEE71 /* PopUpMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */; };
 		0C84C7091AC89D2000061EFB /* RoundedBackgroundLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84C7081AC89D2000061EFB /* RoundedBackgroundLabelNode.m */; };
 		0C9020FD1ACAF4930033A2ED /* telaJogo.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C9020FC1ACAF4930033A2ED /* telaJogo.mp3.mp3 */; };
@@ -31,19 +30,18 @@
 		0CB7626D1ABC9BBF00A1BE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB7626B1ABC9BBF00A1BE30 /* LaunchScreen.xib */; };
 		0CB762791ABC9BBF00A1BE30 /* SupernovaProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */; };
 		0CEC5A221ADD9F17003BFF23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC5A211ADD9F17003BFF23 /* Images.xcassets */; };
-		D42B9E8C1B067D600035ECDF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42B9E8B1B067D600035ECDF /* StoreKit.framework */; };
 		D4762AE21B0F9065007CB8B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE11B0F9065007CB8B0 /* InterfaceController.swift */; };
 		D4762AE41B0F9065007CB8B0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE31B0F9065007CB8B0 /* NotificationController.swift */; };
 		D4762AE61B0F9065007CB8B0 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762AE51B0F9065007CB8B0 /* GlanceController.swift */; };
 		D4762AEC1B0F9065007CB8B0 /* OrbOrbits WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D4762AEB1B0F9065007CB8B0 /* OrbOrbits WatchKit App.app */; };
 		D4762AF41B0F9065007CB8B0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4762AF21B0F9065007CB8B0 /* Interface.storyboard */; };
-		D4762AF91B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4762ADC1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4762B011B0F9A00007CB8B0 /* OrbOrbits WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D4762AEB1B0F9065007CB8B0 /* OrbOrbits WatchKit App.app */; };
 		D48287341B0A7B6C00C2E830 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D48287331B0A7B6C00C2E830 /* UnityAds.bundle */; };
 		D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */; };
 		D4A0D1FC1B14EF9F00355F33 /* scoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0D1FB1B14EF9F00355F33 /* scoreRow.swift */; };
 		D4C1D8E21AC48E7C00B46607 /* IndexShapeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D8E11AC48E7C00B46607 /* IndexShapeNode.m */; };
 		D4C967D51B0A565D00BE9DC6 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */; };
+		F4EFEDF41B162D1D00D8A9F6 /* OrbOrbits WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4762ADC1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F4FC16931ACAF69B00E6B860 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC168F1ACAF69B00E6B860 /* 001.mp3 */; };
 		F4FC16941ACAF69B00E6B860 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16901ACAF69B00E6B860 /* 002.mp3 */; };
 		F4FC16951ACAF69B00E6B860 /* telainicio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4FC16911ACAF69B00E6B860 /* telainicio1.mp3 */; };
@@ -67,13 +65,6 @@
 			remoteGlobalIDString = D4762AEA1B0F9065007CB8B0;
 			remoteInfo = "OrbOrbits WatchKit App";
 		};
-		D4762AF71B0F9065007CB8B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0CB7624C1ABC9BBF00A1BE30 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4762ADB1B0F9065007CB8B0;
-			remoteInfo = "OrbOrbits WatchKit Extension";
-		};
 		D4762B021B0F9A00007CB8B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0CB7624C1ABC9BBF00A1BE30 /* Project object */;
@@ -81,16 +72,23 @@
 			remoteGlobalIDString = D4762AEA1B0F9065007CB8B0;
 			remoteInfo = "OrbOrbits WatchKit App";
 		};
+		F4EFEDF51B162D1D00D8A9F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CB7624C1ABC9BBF00A1BE30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4762ADB1B0F9065007CB8B0;
+			remoteInfo = "OrbOrbits WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D4762B001B0F9065007CB8B0 /* Embed App Extensions */ = {
+		F4EFEDF71B162D1D00D8A9F6 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4762AF91B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex in Embed App Extensions */,
+				F4EFEDF41B162D1D00D8A9F6 /* OrbOrbits WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +107,6 @@
 		0C279E821B14E4BB00F036C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C346A5E1ACB21C700A05741 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		0C346A5F1ACB21C700A05741 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
-		0C40AF851ADAB24B00186FF1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0C79CF5B1AC9A824007DEE71 /* PopUpMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpMenu.h; sourceTree = "<group>"; };
 		0C79CF5C1AC9A824007DEE71 /* PopUpMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpMenu.m; sourceTree = "<group>"; };
 		0C84C7071AC89D2000061EFB /* RoundedBackgroundLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedBackgroundLabelNode.h; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 		0CB762771ABC9BBF00A1BE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB762781ABC9BBF00A1BE30 /* SupernovaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupernovaProjectTests.m; sourceTree = "<group>"; };
 		0CEC5A211ADD9F17003BFF23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D42B9E8B1B067D600035ECDF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D4479AE41B138E1E00D47272 /* OrbOrbits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OrbOrbits.entitlements; sourceTree = "<group>"; };
 		D4479AE51B138EC400D47272 /* OrbOrbits WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "OrbOrbits WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D4762ADC1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OrbOrbits WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,8 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D498E5BC1ADEF45D00FD5B46 /* GoogleMobileAds.framework in Frameworks */,
-				0C40AF861ADAB24B00186FF1 /* GameKit.framework in Frameworks */,
-				D42B9E8C1B067D600035ECDF /* StoreKit.framework in Frameworks */,
 				D4C967D51B0A565D00BE9DC6 /* UnityAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +270,7 @@
 				D4479AE41B138E1E00D47272 /* OrbOrbits.entitlements */,
 				D48287331B0A7B6C00C2E830 /* UnityAds.bundle */,
 				D4C967D41B0A565D00BE9DC6 /* UnityAds.framework */,
-				D42B9E8B1B067D600035ECDF /* StoreKit.framework */,
 				D498E5BB1ADEF45D00FD5B46 /* GoogleMobileAds.framework */,
-				0C40AF851ADAB24B00186FF1 /* GameKit.framework */,
 				0CB762561ABC9BBF00A1BE30 /* SupernovaProject */,
 				0CB762751ABC9BBF00A1BE30 /* SupernovaProjectTests */,
 				D4762ADD1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension */,
@@ -403,13 +395,13 @@
 				0CB762501ABC9BBF00A1BE30 /* Sources */,
 				0CB762511ABC9BBF00A1BE30 /* Frameworks */,
 				0CB762521ABC9BBF00A1BE30 /* Resources */,
-				D4762B001B0F9065007CB8B0 /* Embed App Extensions */,
+				F4EFEDF71B162D1D00D8A9F6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4762AF81B0F9065007CB8B0 /* PBXTargetDependency */,
 				D4762B031B0F9A00007CB8B0 /* PBXTargetDependency */,
+				F4EFEDF61B162D1D00D8A9F6 /* PBXTargetDependency */,
 			);
 			name = OrbOrbits;
 			productName = SupernovaProject;
@@ -478,16 +470,16 @@
 				TargetAttributes = {
 					0CB762531ABC9BBF00A1BE30 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = CF32H8XYHX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -498,10 +490,10 @@
 					};
 					D4762ADB1B0F9065007CB8B0 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = CF32H8XYHX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -636,15 +628,15 @@
 			target = D4762AEA1B0F9065007CB8B0 /* OrbOrbits WatchKit App */;
 			targetProxy = D4762AED1B0F9065007CB8B0 /* PBXContainerItemProxy */;
 		};
-		D4762AF81B0F9065007CB8B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4762ADB1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension */;
-			targetProxy = D4762AF71B0F9065007CB8B0 /* PBXContainerItemProxy */;
-		};
 		D4762B031B0F9A00007CB8B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4762AEA1B0F9065007CB8B0 /* OrbOrbits WatchKit App */;
 			targetProxy = D4762B021B0F9A00007CB8B0 /* PBXContainerItemProxy */;
+		};
+		F4EFEDF61B162D1D00D8A9F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4762ADB1B0F9065007CB8B0 /* OrbOrbits WatchKit Extension */;
+			targetProxy = F4EFEDF51B162D1D00D8A9F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -759,10 +751,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = OrbOrbits.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -782,10 +772,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = OrbOrbits.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -837,7 +825,6 @@
 		D4762AFA1B0F9065007CB8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "OrbOrbits WatchKit Extension/OrbOrbits WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -859,7 +846,6 @@
 		D4762AFB1B0F9065007CB8B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "OrbOrbits WatchKit Extension/OrbOrbits WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
