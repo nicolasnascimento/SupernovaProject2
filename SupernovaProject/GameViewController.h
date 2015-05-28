@@ -15,10 +15,13 @@
 
 @interface GameViewController : UIViewController <GKGameCenterControllerDelegate, GADInterstitialDelegate, UnityAdsDelegate>
 
+
+@property BOOL shouldOpenGameCenter;
 @property BOOL playerIsAuthenticated;
 @property (strong, nonatomic) IBOutlet GADBannerView *bannerView;
 @property(nonatomic, strong) GADInterstitial *interstitial;
 
 -(void)setupAd;
+-(void)restoreUserActivityState:(NSUserActivity *)activity;
 
 @end

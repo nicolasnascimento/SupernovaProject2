@@ -106,7 +106,13 @@
 //
     [self addChild:self.title];
     self.title.zPosition = 60;
-
+    
+    if( self.view.window != nil && self.view.window.rootViewController != nil ) {
+        GameViewController* viewController = (GameViewController *)self.view.window.rootViewController;
+        if( viewController.shouldOpenGameCenter ) {
+            [self showLeaderboardAndAchievements:YES];
+        }
+    }
 }
 
 -(void)createTitle{
