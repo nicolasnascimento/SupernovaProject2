@@ -17,6 +17,7 @@
 @implementation GameViewController
 
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
     
@@ -117,6 +118,17 @@
 -(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
     [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
     //[self setUpScene];
+}
+
+-(void)restoreUserActivityState:(NSUserActivity *)activity {
+    if( activity.userInfo != nil ){
+        NSDictionary* info = activity.userInfo;
+        if( [info[@"shouldProceedToGameCenter"]  isEqual: @"ahah"] ) {
+            self.shouldOpenGameCenter = true;
+        }else{
+            self.shouldOpenGameCenter = false;
+        }
+    }
 }
 
 - (BOOL)shouldAutorotate

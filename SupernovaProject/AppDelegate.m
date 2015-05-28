@@ -79,4 +79,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler{
+    
+    if( self.window != nil ) {
+        GameViewController* viewController = (GameViewController *)self.window.rootViewController;
+        
+        [viewController restoreUserActivityState:userActivity];
+    }
+    
+    return YES;
+}
+
 @end
