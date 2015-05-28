@@ -12,7 +12,7 @@
                     <items>
                         <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="Zdj-1T-UPL">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="Label" id="T0v-74-RWf">
+                                <label alignment="center" verticalAlignment="center" text="0" id="T0v-74-RWf">
                                     <fontDescription key="font" type="italicSystem" pointSize="32"/>
                                 </label>
                             </items>
@@ -45,8 +45,8 @@
                                         <tableRow identifier="scoreRow" id="sEd-3u-Df7" customClass="scoreRow" customModule="OrbOrbits_WatchKit_Extension">
                                             <group key="rootItem" width="1" height="0.0" alignment="left" id="niB-xa-WDE">
                                                 <items>
-                                                    <label alignment="right" text="Label" id="Hr1-IE-N7z"/>
-                                                    <label width="76.5" alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="T3f-TY-2u7"/>
+                                                    <label alignment="right" text="Score" id="Hr1-IE-N7z"/>
+                                                    <label width="76.5" alignment="left" verticalAlignment="center" text="User" numberOfLines="0" minimumScaleFactor="0.5" id="T3f-TY-2u7"/>
                                                 </items>
                                             </group>
                                             <connections>
