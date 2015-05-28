@@ -14,4 +14,7 @@
 @property (nonatomic) BOOL firstTime;
 @property (nonatomic) BOOL isMusicPlaying;
 
+-(void)showGameCenterFromHandoff;
+-(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard;
+
 @end

@@ -81,6 +81,14 @@
         else if ([GKLocalPlayer localPlayer].isAuthenticated){
             NSLog(@"enableGameCenter");
             self.playerIsAuthenticated = YES;
+            SKView * skView = (SKView *)self.view;
+            if([skView.scene isKindOfClass:[StartMenuScene class]]){
+                StartMenuScene *scene = (StartMenuScene *)skView.scene;
+                NSLog(@"tsestrtdf");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [scene showGameCenterFromHandoff];
+                });
+            }
         }
         else{
             //[self disableGameCenter];
@@ -123,7 +131,10 @@
 -(void)restoreUserActivityState:(NSUserActivity *)activity {
     if( activity.userInfo != nil ){
         NSDictionary* info = activity.userInfo;
-        if( [info[@"shouldProceedToGameCenter"]  isEqual: @"ahah"] ) {
+        if( [info[@"shouldProceedToGameCenter"]  isEqual: @"true"] ) {
+//            StartMenuScene *scene = (StartMenuScene *)((SKView *)self.view).scene;
+//            [scene showLeaderboardAndAchievements:YES];
+            
             self.shouldOpenGameCenter = true;
         }else{
             self.shouldOpenGameCenter = false;

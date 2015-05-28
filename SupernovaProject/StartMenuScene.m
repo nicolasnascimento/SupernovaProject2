@@ -107,9 +107,14 @@
     [self addChild:self.title];
     self.title.zPosition = 60;
     
+    
+}
+
+-(void)showGameCenterFromHandoff{
     if( self.view.window != nil && self.view.window.rootViewController != nil ) {
         GameViewController* viewController = (GameViewController *)self.view.window.rootViewController;
         if( viewController.shouldOpenGameCenter ) {
+            NSLog(@"if interno");
             [self showLeaderboardAndAchievements:YES];
         }
     }
@@ -131,12 +136,13 @@
     
     if (shouldShowLeaderboard) {
         gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
-        gcViewController.leaderboardIdentifier = @"GeneralRanking";
+        gcViewController.leaderboardIdentifier = @"grp.GeneralRanking";
     }
     else{
         gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
     }
     
+
     [self.view.window.rootViewController presentViewController:gcViewController animated:YES completion:nil];
 }
 

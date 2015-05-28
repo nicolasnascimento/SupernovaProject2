@@ -49,6 +49,10 @@
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
+    NSUserActivity *activity = [[NSUserActivity alloc]initWithActivityType:@"com.supernova.OrbitAll.Glance"];
+    activity.userInfo = @{@"shouldProceedToGameCenter":@"true"};
+    //[self application:application continueUserActivity:activity restorationHandler:nil ];
+    
     return YES;
 }
 
@@ -83,7 +87,7 @@
     
     if( self.window != nil ) {
         GameViewController* viewController = (GameViewController *)self.window.rootViewController;
-        
+
         [viewController restoreUserActivityState:userActivity];
     }
     
