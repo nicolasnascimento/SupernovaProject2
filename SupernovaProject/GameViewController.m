@@ -82,7 +82,7 @@
             NSLog(@"enableGameCenter");
             self.playerIsAuthenticated = YES;
             SKView * skView = (SKView *)self.view;
-            if([skView.scene isKindOfClass:[StartMenuScene class]]){
+            if([skView.scene isKindOfClass:[StartMenuScene class]] && self.shouldOpenGameCenter ){
                 StartMenuScene *scene = (StartMenuScene *)skView.scene;
                 NSLog(@"tsestrtdf");
                 dispatch_async(dispatch_get_main_queue(), ^{

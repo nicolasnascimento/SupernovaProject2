@@ -42,16 +42,16 @@
     localNotification.alertTitle = @"OrbOrbits News";
     localNotification.alertBody = @"Your Orbits Are Missing You";
     localNotification.alertAction = @"open";
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30/*25200*/];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10/*25200*/];
     localNotification.userInfo = @{@"notification Text" : @"Your Orbits Are Missing You!"};
     localNotification.category = @"aCategory";
     
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
-    NSUserActivity *activity = [[NSUserActivity alloc]initWithActivityType:@"com.supernova.OrbitAll.Glance"];
-    activity.userInfo = @{@"shouldProceedToGameCenter":@"true"};
-    //[self application:application continueUserActivity:activity restorationHandler:nil ];
+//    NSUserActivity *activity = [[NSUserActivity alloc]initWithActivityType:@"com.supernova.OrbitAll.Glance"];
+//    activity.userInfo = @{@"shouldProceedToGameCenter":@"false"};
+//    [self application:application continueUserActivity:activity restorationHandler:nil ];
     
     return YES;
 }
